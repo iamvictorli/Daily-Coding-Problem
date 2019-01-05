@@ -1,0 +1,13 @@
+{
+  "name": "daily-coding-problem",
+  "description": "Daily Coding Problem https://www.dailycodingproblem.com/",
+  "author": "Victor Li",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
