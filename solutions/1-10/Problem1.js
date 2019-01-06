@@ -12,6 +12,9 @@
  *
  * https://leetcode.com/problems/two-sum/description/
  * https://www.youtube.com/watch?v=XKu_SEDAykw
+ *
+ * O(N) Time complexity
+ * O(N) Space complexity
  */
 
 /**
