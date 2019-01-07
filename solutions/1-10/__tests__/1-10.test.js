@@ -1,5 +1,6 @@
 const TwoSum = require('../Problem1');
 const ProductExceptSelf = require('../Problem2');
+const { TreeNode, serialize, deserialize } = require('../Problem3');
 
 test('Problem 1 Two Sum', () => {
   expect(TwoSum([2, 7, 11, 15], 9)).toBe(true);
@@ -13,4 +14,16 @@ test('Problem 2 Product', () => {
   expect(ProductExceptSelf([3, 2, 1])).toEqual([2, 3, 6]);
   expect(ProductExceptSelf([1])).toEqual([1]);
   expect(ProductExceptSelf([])).toEqual([]);
+});
+
+test('Problem 3 Serialize And Deserialize Binary Tree', () => {
+  expect(deserialize(serialize(null))).toBe(null);
+
+  const node = new TreeNode(
+    'root',
+    new TreeNode('left', new TreeNode('left.left'), new TreeNode('right'))
+  );
+
+  expect(deserialize(serialize(node))).toEqual(node);
+  expect(deserialize(serialize(node)).left.left.val).toEqual('left.left');
 });
