@@ -15,6 +15,7 @@
  *
  * O(N) Time Complexity
  * O(N) Space Complexity, O(1) if not including output array
+ * N is the length of nums
  */
 
 // With division, multiply every number to have a final product and then for each number divide from the final product

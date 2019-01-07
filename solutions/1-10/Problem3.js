@@ -19,6 +19,10 @@
  *
  * https://leetcode.com/problems/serialize-and-deserialize-bst/description/
  *
+ * Both serialize and deserialize functions:
+ * O(N) Time Complexity
+ * O(N) Space Complexity
+ * N is the number of nodes in the tree
  */
 
 class TreeNode {
