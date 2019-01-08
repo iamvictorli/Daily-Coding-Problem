@@ -1,6 +1,6 @@
-const TwoSum = require('../Problem1');
-const ProductExceptSelf = require('../Problem2');
-const { TreeNode, serialize, deserialize } = require('../Problem3');
+import TwoSum from '../Problem1';
+import ProductExceptSelf from '../Problem2';
+import { TreeNode, serialize, deserialize } from '../Problem3';
 
 test('Problem 1 Two Sum', () => {
   expect(TwoSum([2, 7, 11, 15], 9)).toBe(true);

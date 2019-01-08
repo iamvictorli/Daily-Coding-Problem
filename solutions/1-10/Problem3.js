@@ -95,8 +95,4 @@ function deserialize(serializedString) {
   return root;
 }
 
-module.exports = {
-  TreeNode,
-  serialize,
-  deserialize
-};
+export { TreeNode, serialize, deserialize };

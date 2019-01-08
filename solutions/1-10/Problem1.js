@@ -25,7 +25,8 @@
  */
 function twoSum(nums, target) {
   const differenceSet = new Set();
-  for (const num of nums) {
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
     const difference = target - num;
     if (differenceSet.has(difference)) {
       return true;
@@ -35,4 +36,4 @@ function twoSum(nums, target) {
   return false;
 }
 
-module.exports = twoSum;
+export default twoSum;

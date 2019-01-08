@@ -39,11 +39,11 @@ function productExceptSelf(nums) {
   // get product numbers right of self
   let product = 1;
   for (let i = productArr.length - 1; i >= 0; i--) {
-    productArr[i] = productArr[i] * product;
+    productArr[i] *= product;
     product *= nums[i];
   }
 
   return productArr;
 }
 
-module.exports = productExceptSelf;
+export default productExceptSelf;
