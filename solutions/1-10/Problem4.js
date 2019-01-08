@@ -14,6 +14,10 @@
  *
  * https://leetcode.com/problems/first-missing-positive/description/
  *
+ * O(N) Time complexity
+ * O(1) Space complexity
+ * N is the number of elements in the array
+ *
  */
 
 /**

@@ -15,7 +15,7 @@
  *
  * O(N) Time Complexity
  * O(N) Space Complexity, O(1) if not including output array
- * N is the length of nums
+ * N is the number of elements in the array
  *
  */
 
