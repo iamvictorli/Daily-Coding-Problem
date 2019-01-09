@@ -22,19 +22,24 @@ Given the root to a binary tree, implement serialize(root), which serializes the
 
 For example, given the following Node class
 
-```python
-class Node:
-    def __init__(self, val, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+```javascript
+class TreeNode {
+  constructor(val, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
 ```
 
 The following test should pass:
 
-```python
-node = Node('root', Node('left', Node('left.left')), Node('right'))
-assert deserialize(serialize(node)).left.left.val == 'left.left'
+```javascript
+const node = new TreeNode(
+  'root',
+  new TreeNode('left', new TreeNode('left.left'), new TreeNode('right'))
+);
+expect(deserialize(serialize(node)).left.left.val).toEqual('left.left'); // Jest Testing
 ```
 
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/1-10/Problem3.js)

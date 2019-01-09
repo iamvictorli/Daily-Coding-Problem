@@ -52,8 +52,8 @@ The following test should pass:
 
 ```javascript
 const node = new TreeNode(
-'root',
-new TreeNode('left', new TreeNode('left.left'), new TreeNode('right'))
+  'root',
+  new TreeNode('left', new TreeNode('left.left'), new TreeNode('right'))
 );
 expect(deserialize(serialize(node)).left.left.val).toEqual('left.left'); // Jest Testing
 ```
