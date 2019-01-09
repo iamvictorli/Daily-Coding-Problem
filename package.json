@@ -1,7 +1,7 @@
 {
   "name": "daily-coding-problem",
   "version": "1.0.0",
-  "description": "Daily Coding Problem https://www.dailycodingproblem.com/ Solutions in Javascript",
+  "description": "Daily Coding Problem https://www.dailycodingproblem.com Solutions in Javascript",
   "author": "Victor Li",
   "license": "MIT",
   "repository": "git+https://github.com/Li-Victor/daily-coding-problem.git",

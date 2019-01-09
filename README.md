@@ -38,19 +38,24 @@ Given the root to a binary tree, implement serialize(root), which serializes the
 
 For example, given the following Node class
 
-```python
-class Node:
-    def __init__(self, val, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+```javascript
+class TreeNode {
+  constructor(val, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
 ```
 
 The following test should pass:
 
-```python
-node = Node('root', Node('left', Node('left.left')), Node('right'))
-assert deserialize(serialize(node)).left.left.val == 'left.left'
+```javascript
+const node = new TreeNode(
+'root',
+new TreeNode('left', new TreeNode('left.left'), new TreeNode('right'))
+);
+expect(deserialize(serialize(node)).left.left.val).toEqual('left.left'); // Jest Testing
 ```
 
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/1-10/Problem3.js)
@@ -68,5 +73,28 @@ For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should g
 You can modify the input array in-place.
 
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/1-10/Problem4.js)
+
+---
+
+## Problem 5
+
+This problem was asked by Jane Street.
+
+cons(a, b) constructs a pair, and car(pair) and cdr(pair) returns the first and last element of that pair. For example, car(cons(3, 4)) returns 3, and cdr(cons(3, 4)) returns 4.
+
+Given this implementation of cons:
+
+```javascript
+function cons(a, b) {
+  function pair(cb) {
+    return cb(a, b);
+  }
+  return pair;
+}
+```
+
+Implement car and cdr.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/1-10/Problem5.js)
 
 ---

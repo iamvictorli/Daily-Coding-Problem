@@ -2,6 +2,7 @@ import TwoSum from '../Problem1';
 import ProductExceptSelf from '../Problem2';
 import { TreeNode, serialize, deserialize } from '../Problem3';
 import FirstMissingPositiveInteger from '../Problem4';
+import { cons, car, cdr } from '../Problem5';
 
 test('Problem 1 Two Sum', () => {
   expect(TwoSum([2, 7, 11, 15], 9)).toBe(true);
@@ -37,4 +38,9 @@ test('Problem 4 First Missing Positive Integer', () => {
   expect(FirstMissingPositiveInteger([1, 2, 4, 5])).toBe(3);
   expect(FirstMissingPositiveInteger([-1, -2, -4, -5])).toBe(1);
   expect(FirstMissingPositiveInteger([7, 8, 9, 11, 12])).toBe(1);
+});
+
+test('Problem 5 Pairs', () => {
+  expect(car(cons(3, 4))).toBe(3);
+  expect(cdr(cons(3, 4))).toBe(4);
 });
