@@ -20,6 +20,7 @@
  */
 
 /**
+ * Returns true if two numbers adds up to target
  * @param {number[]} nums
  * @param {number} target
  * @return {boolean}

@@ -15,8 +15,11 @@
  *   }
  * }
  *
- * node = Node('root', Node('left', Node('left.left')), Node('right'))
- * assert deserialize(serialize(node)).left.left.val == 'left.left'
+ * const node = new TreeNode(
+ *   'root',
+ *   new TreeNode('left', new TreeNode('left.left'), new TreeNode('right'))
+ * );
+ * expect(deserialize(serialize(node)).left.left.val).toEqual('left.left'); // Jest Testing
  *
  * https://leetcode.com/problems/serialize-and-deserialize-bst/description/
  *
@@ -38,6 +41,7 @@ class TreeNode {
 // Serialize using level order traversal
 
 /**
+ * Returns the serialized string of a tree
  * @param {TreeNode} root
  * @return {string}
  */
@@ -63,6 +67,7 @@ function serialize(root) {
 }
 
 /**
+ * Builds a tree out of a serialized string of a tree
  * @param {string} serializedString
  * @return {TreeNode}
  */

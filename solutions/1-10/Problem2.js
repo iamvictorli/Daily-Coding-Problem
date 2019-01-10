@@ -22,6 +22,7 @@
 // With division, multiply every number to have a final product and then for each number divide from the final product
 
 /**
+ * Returns a new array for each element to be a product of all the other elements except for the current index
  * @param {number[]} nums
  * @return {number[]}
  */

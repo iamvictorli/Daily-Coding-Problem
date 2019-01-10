@@ -21,6 +21,7 @@
  */
 
 /**
+ * Constructs a pair and returns a callback to be used for the pair
  * @param {number} a
  * @param {number} b
  * @return {function}
@@ -33,6 +34,7 @@ function cons(a, b) {
 }
 
 /**
+ * Returns the first element of the pair
  * @param {function} fn
  * @return {number}
  */
@@ -46,6 +48,7 @@ function car(fn) {
 }
 
 /**
+ * Returns the second element of the pair
  * @param {function} fn
  * @return {number}
  */
