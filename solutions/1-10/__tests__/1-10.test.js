@@ -3,6 +3,7 @@ import ProductExceptSelf from '../Problem2';
 import { TreeNode, serialize, deserialize } from '../Problem3';
 import FirstMissingPositiveInteger from '../Problem4';
 import { cons, car, cdr } from '../Problem5';
+import NumDecodings from '../Problem7';
 
 test('Problem 1 Two Sum', () => {
   expect(TwoSum([2, 7, 11, 15], 9)).toBe(true);
@@ -43,4 +44,18 @@ test('Problem 4 First Missing Positive Integer', () => {
 test('Problem 5 Pairs', () => {
   expect(car(cons(3, 4))).toBe(3);
   expect(cdr(cons(3, 4))).toBe(4);
+});
+
+test('Problem 7 Decode Message', () => {
+  expect(NumDecodings('111')).toBe(3);
+  expect(NumDecodings('12')).toBe(2);
+  expect(NumDecodings('8')).toBe(1);
+  expect(NumDecodings('26')).toBe(2);
+  expect(NumDecodings('27')).toBe(1);
+  expect(NumDecodings('226')).toBe(3);
+  expect(NumDecodings('10')).toBe(1);
+  expect(NumDecodings('11')).toBe(2);
+  expect(NumDecodings('34')).toBe(1);
+  expect(NumDecodings('0')).toBe(0);
+  expect(NumDecodings('1')).toBe(1);
 });

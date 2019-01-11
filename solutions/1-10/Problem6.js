@@ -26,6 +26,10 @@
  */
 
 class ListNode {
+  /**
+   * Initialize List Node
+   * @param {*} val
+   */
   constructor(val) {
     this.val = val;
     this.both = null;
@@ -36,11 +40,18 @@ class ListNode {
 // Assume null ^ null = null
 // If the linkedlist has one node, that ListNode.both is null
 class XORLinkedList {
+  /**
+   * Initialize XOR Linked List
+   */
   constructor() {
     this.root = null;
     this.tail = null;
   }
 
+  /**
+   * Adds a value to the end of the linked list
+   * @param {*} val
+   */
   add(val) {
     const node = new ListNode(val);
     if (this.root === null && this.tail === null) {
@@ -53,6 +64,11 @@ class XORLinkedList {
     }
   }
 
+  /**
+   * Returns the node at index of this XOR Linked List
+   * @param {number} index
+   * @return {ListNode}
+   */
   get(index) {
     if (index === 0) {
       return this.root;
