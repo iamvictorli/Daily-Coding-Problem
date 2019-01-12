@@ -1,29 +1,25 @@
 /* eslint no-unused-vars: ["error", { "varsIgnorePattern": "^numDecodings" }] */
 
-/**
- *
- * Problem 7
- *
- * This problem was asked by Facebook.
- *
- * Given the mapping a = 1, b = 2, ... z = 26, and an encoded message,
- * count the number of ways it can be decoded.
- *
- * For example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.
- *
- * You can assume that the messages are decodable. For example, '001' is not allowed.
- *
- * https://leetcode.com/problems/decode-ways/description/
- *
- * O(N) Time complexity
- * O(1) Space complexity
- * N is the length of the message
- *
- */
+// Problem 7
+//
+// This problem was asked by Facebook.
+//
+// Given the mapping a = 1, b = 2, ... z = 26, and an encoded message,
+// count the number of ways it can be decoded.
+//
+// For example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.
+//
+// You can assume that the messages are decodable. For example, '001' is not allowed.
+//
+// https://leetcode.com/problems/decode-ways/description/
+//
+// O(N) Time complexity
+// O(1) Space complexity
+// N is the length of the message
 
 /**
  * Returns the number of ways the message can be decoded.
- * Each solution build on the previous
+ * Each solution builds on the previous
  * @param {string} message
  * @return {number}
  */
@@ -77,7 +73,7 @@ function numDecodingsRMemo(message) {
 }
 
 /**
- * Top Down Recursive Solution with Memoization O(N) Time and Space Complexity
+ * Top Down Recursive Helper function with Memoization O(N) Time and Space Complexity
  * @param {string} message
  * @param {number} index
  * @param {Map} map

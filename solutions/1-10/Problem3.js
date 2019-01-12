@@ -1,36 +1,38 @@
-/**
- *
- * This problem was asked by Google
- *
- * Given the root to a binary tree, implement serialize(root), which serializes the tree into a string,
- * and deserialize(s), which deserializes the string back into the tree.
- *
- * For example, given the following Node class
- *
- * class TreeNode {
- *   constructor(val, left = null, right = null) {
- *     this.val = val;
- *     this.left = left;
- *     this.right = right;
- *   }
- * }
- *
- * const node = new TreeNode(
- *   'root',
- *   new TreeNode('left', new TreeNode('left.left'), new TreeNode('right'))
- * );
- * expect(deserialize(serialize(node)).left.left.val).toEqual('left.left'); // Jest Testing
- *
- * https://leetcode.com/problems/serialize-and-deserialize-bst/description/
- *
- * Both serialize and deserialize functions:
- * O(N) Time Complexity
- * O(N) Space Complexity
- * N is the number of nodes in the tree
- *
- */
+// Problem 3
+//
+// This problem was asked by Google
+//
+// Given the root to a binary tree, implement serialize(root), which serializes the tree into a string,
+// and deserialize(s), which deserializes the string back into the tree.
+//
+// For example, given the following Node class
+//
+// class TreeNode {
+// constructor(val, left = null, right = null) {
+//   this.val = val;
+//   this.left = left;
+//   this.right = right;
+// }
+// }
+//
+// const node = new TreeNode(
+//   'root',
+//   new TreeNode('left', new TreeNode('left.left'), new TreeNode('right'))
+// );
+// expect(deserialize(serialize(node)).left.left.val).toEqual('left.left'); // Jest Testing
+//
+// https://leetcode.com/problems/serialize-and-deserialize-bst/description/
+//
+// Both serialize and deserialize functions:
+// O(N) Time Complexity
+// O(N) Space Complexity
+// N is the number of nodes in the tree
 
 class TreeNode {
+  /**
+   * Initialize a binary tree node with a value and/or left and right nodes
+   * @param {*} val The value stored in the binary tree node.
+   */
   constructor(val, left = null, right = null) {
     this.val = val;
     this.left = left;
@@ -102,4 +104,4 @@ function deserialize(serializedString) {
   return root;
 }
 
-export { TreeNode, serialize, deserialize };
+export { serialize, deserialize };

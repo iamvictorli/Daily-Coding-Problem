@@ -1,9 +1,12 @@
+import TreeNode from '../../Data-Structures/TreeNode';
+
 import TwoSum from '../Problem1';
 import ProductExceptSelf from '../Problem2';
-import { TreeNode, serialize, deserialize } from '../Problem3';
+import { serialize, deserialize } from '../Problem3';
 import FirstMissingPositiveInteger from '../Problem4';
 import { cons, car, cdr } from '../Problem5';
 import NumDecodings from '../Problem7';
+import CountUnivalSubtrees from '../Problem8';
 
 test('Problem 1 Two Sum', () => {
   expect(TwoSum([2, 7, 11, 15], 9)).toBe(true);
@@ -58,4 +61,55 @@ test('Problem 7 Decode Message', () => {
   expect(NumDecodings('34')).toBe(1);
   expect(NumDecodings('0')).toBe(0);
   expect(NumDecodings('1')).toBe(1);
+});
+
+test('Problem 8 Count Unival Subtrees', () => {
+  const node = new TreeNode(0);
+  node.left = new TreeNode(1);
+  node.right = new TreeNode(0);
+  node.right.left = new TreeNode(1);
+  node.right.right = new TreeNode(0);
+  node.right.left.left = new TreeNode(1);
+  node.right.left.right = new TreeNode(1);
+
+  expect(CountUnivalSubtrees(node)).toBe(5);
+
+  const node1 = new TreeNode(0);
+  node1.left = new TreeNode(0);
+  node1.right = new TreeNode(0);
+  node1.right.left = new TreeNode(0);
+  node1.right.right = new TreeNode(0);
+  node1.right.right.right = new TreeNode(1);
+
+  expect(CountUnivalSubtrees(node1)).toBe(3);
+
+  const node2 = new TreeNode(0);
+  node2.left = new TreeNode(2);
+  node2.right = new TreeNode(1);
+  node2.right.left = new TreeNode(1);
+  node2.right.right = new TreeNode(1);
+  node2.right.right.right = new TreeNode(1);
+
+  expect(CountUnivalSubtrees(node2)).toBe(5);
+
+  const node3 = new TreeNode(0);
+  expect(CountUnivalSubtrees(node3)).toBe(1);
+
+  const node4 = new TreeNode(0);
+  node4.left = new TreeNode(0);
+  expect(CountUnivalSubtrees(node4)).toBe(2);
+
+  const node5 = new TreeNode(0);
+  node5.left = new TreeNode(1);
+  expect(CountUnivalSubtrees(node5)).toBe(1);
+
+  const node6 = new TreeNode(0);
+  node6.left = new TreeNode(0);
+  node6.right = new TreeNode(0);
+  expect(CountUnivalSubtrees(node6)).toBe(3);
+
+  const node7 = new TreeNode(0);
+  node7.left = new TreeNode(1);
+  node7.right = new TreeNode(2);
+  expect(CountUnivalSubtrees(node7)).toBe(2);
 });
