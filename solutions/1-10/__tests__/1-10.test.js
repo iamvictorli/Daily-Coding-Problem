@@ -7,6 +7,7 @@ import FirstMissingPositiveInteger from '../Problem4';
 import { cons, car, cdr } from '../Problem5';
 import NumDecodings from '../Problem7';
 import CountUnivalSubtrees from '../Problem8';
+import SumNonAdjacent from '../Problem9';
 
 test('Problem 1 Two Sum', () => {
   expect(TwoSum([2, 7, 11, 15], 9)).toBe(true);
@@ -112,4 +113,24 @@ test('Problem 8 Count Unival Subtrees', () => {
   node7.left = new TreeNode(1);
   node7.right = new TreeNode(2);
   expect(CountUnivalSubtrees(node7)).toBe(2);
+});
+
+test('Problem 9 Non Adjacent Sums', () => {
+  expect(SumNonAdjacent([2, 4, 6, 2, 5])).toBe(13);
+  expect(SumNonAdjacent([5, 1, 1, 5])).toBe(10);
+  expect(SumNonAdjacent([5])).toBe(5);
+  expect(SumNonAdjacent([5, 6])).toBe(6);
+  expect(SumNonAdjacent([6, 5])).toBe(6);
+
+  expect(SumNonAdjacent([0, -4, -2])).toBe(0);
+  expect(SumNonAdjacent([0, -2, -4])).toBe(0);
+  expect(SumNonAdjacent([0, 0, -4])).toBe(0);
+  expect(SumNonAdjacent([-5, -1, -1, -5])).toBe(0);
+  expect(SumNonAdjacent([-5, -1, 1, -5])).toBe(1);
+
+  expect(SumNonAdjacent([2, 4, -6, 2, 5])).toBe(9);
+  expect(SumNonAdjacent([2, 4, -6, 5, 2])).toBe(9);
+  expect(SumNonAdjacent([2, 4, -6, -5, 4])).toBe(8);
+  expect(SumNonAdjacent([3, 5, -7, 8, 10])).toBe(15);
+  expect(SumNonAdjacent([-3])).toBe(0);
 });

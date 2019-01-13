@@ -17,6 +17,11 @@
 //    1   0
 //   / \
 //  1   1
+//
+// https://www.dailycodingproblem.com/blog/unival-trees/
+//
+// O(N) Time complexity
+// O(N) Space complexity
 
 // eslint-disable-next-line
 class TreeNode {
