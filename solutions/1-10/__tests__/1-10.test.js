@@ -8,6 +8,7 @@ import { cons, car, cdr } from '../Problem5';
 import NumDecodings from '../Problem7';
 import CountUnivalSubtrees from '../Problem8';
 import SumNonAdjacent from '../Problem9';
+import Schedule from '../Problem10';
 
 test('Problem 1 Two Sum', () => {
   expect(TwoSum([2, 7, 11, 15], 9)).toBe(true);
@@ -133,4 +134,21 @@ test('Problem 9 Non Adjacent Sums', () => {
   expect(SumNonAdjacent([2, 4, -6, -5, 4])).toBe(8);
   expect(SumNonAdjacent([3, 5, -7, 8, 10])).toBe(15);
   expect(SumNonAdjacent([-3])).toBe(0);
+});
+
+test('Problem 10 Job Scheduling', () => {
+  jest.useFakeTimers();
+
+  const callback = jest.fn();
+  Schedule(callback, 1000);
+
+  expect(callback).not.toBeCalled();
+
+  jest.runAllTimers();
+
+  expect(callback).toBeCalled();
+  expect(callback).toHaveBeenCalledTimes(1);
+
+  expect(setTimeout).toHaveBeenCalledTimes(1);
+  expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 1000);
 });
