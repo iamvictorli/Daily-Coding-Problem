@@ -1,4 +1,5 @@
 import getWordsWithPrefix from '../11-20/Problem11';
+import { climbStairs1, climbStairs2 } from '../11-20/Problem12';
 
 describe('Problems 11 - 20', () => {
   test('Problem 11 Get all words with prefix', () => {
@@ -47,5 +48,13 @@ describe('Problems 11 - 20', () => {
     expect(
       getWordsWithPrefix('fr', ['dog', 'deer', 'deal', 'cat'])
     ).toHaveLength(0);
+  });
+
+  test('Problem 12 Climbing Stairs', () => {
+    expect(climbStairs1(4)).toBe(5);
+    expect(climbStairs2(4, [1, 2])).toBe(5);
+
+    expect(climbStairs2(4, [1, 2, 3])).toBe(7);
+    expect(climbStairs2(7, [1, 3, 5])).toBe(12);
   });
 });
