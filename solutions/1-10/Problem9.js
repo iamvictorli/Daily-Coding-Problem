@@ -15,6 +15,7 @@
 //
 // O(N) Time Complexity
 // O(1) Space Complexity
+// N is the number of elements in the array
 
 /**
  * Returns the largest sum of non-adjacent numbers

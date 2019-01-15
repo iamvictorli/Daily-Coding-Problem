@@ -22,6 +22,7 @@
 //
 // O(N) Time complexity
 // O(N) Space complexity
+// N is the number of nodes in the tree
 
 // eslint-disable-next-line
 class TreeNode {
