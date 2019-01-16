@@ -1,5 +1,6 @@
 import getWordsWithPrefix from '../11-20/Problem11';
 import { climbStairs1, climbStairs2 } from '../11-20/Problem12';
+import KLongestSubstring from '../11-20/Problem13';
 
 describe('Problems 11 - 20', () => {
   test('Problem 11 Get all words with prefix', () => {
@@ -56,5 +57,20 @@ describe('Problems 11 - 20', () => {
 
     expect(climbStairs2(4, [1, 2, 3])).toBe(7);
     expect(climbStairs2(7, [1, 3, 5])).toBe(12);
+  });
+
+  test('Problem 13 Longest Substring With K Distinct Characters', () => {
+    expect(KLongestSubstring('abcba', 2)).toBe('bcb');
+    expect(KLongestSubstring('abaacca', 2)).toBe('aacca');
+    expect(KLongestSubstring('eceba', 2)).toBe('ece');
+
+    // can be any one of these values
+    expect(['aa', 'bb', 'cc']).toContain(KLongestSubstring('aabbcc', 1));
+    expect(['aabb', 'bbcc']).toContain(KLongestSubstring('aabbcc', 2));
+    expect(KLongestSubstring('aabbcc', 3)).toBe('aabbcc');
+    expect(KLongestSubstring('aaaccc', 2)).toBe('aaaccc');
+
+    expect(KLongestSubstring('abcbbbbcccbdddadacb', 2)).toBe('bcbbbbcccb');
+    expect(KLongestSubstring('abcadcacacaca', 3)).toBe('cadcacacaca');
   });
 });
