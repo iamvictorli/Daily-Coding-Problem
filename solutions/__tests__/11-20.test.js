@@ -1,6 +1,7 @@
 import getWordsWithPrefix from '../11-20/Problem11';
 import { climbStairs1, climbStairs2 } from '../11-20/Problem12';
 import KLongestSubstring from '../11-20/Problem13';
+import selectRandomizer from '../11-20/Problem15';
 
 describe('Problems 11 - 20', () => {
   test('Problem 11 Get all words with prefix', () => {
@@ -72,5 +73,22 @@ describe('Problems 11 - 20', () => {
 
     expect(KLongestSubstring('abcbbbbcccbdddadacb', 2)).toBe('bcbbbbcccb');
     expect(KLongestSubstring('abcadcacacaca', 3)).toBe('cadcacacaca');
+  });
+
+  test('Problem 15 Select Random Element From Stream of Elements', () => {
+    const stream1 = [1, 2, 3, 4, 5];
+    const stream2 = [6, 7, 8, 9, 10];
+    const stream3 = [11, 12, 13, 14, 15];
+    const randomizer = selectRandomizer();
+
+    const rand1 = randomizer(stream1);
+    const rand2 = randomizer(stream2);
+    const rand3 = randomizer(stream3);
+
+    expect([1, 2, 3, 4, 5]).toContain(rand1);
+    expect([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).toContain(rand2);
+    expect([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]).toContain(
+      rand3
+    );
   });
 });

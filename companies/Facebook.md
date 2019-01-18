@@ -13,3 +13,13 @@ You can assume that the messages are decodable. For example, '001' is not allowe
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/1-10/Problem7.js)
 
 ---
+
+## Problem 15
+
+This problem was asked by Facebook.
+
+Given a stream of elements too large to store in memory, pick a random element from the stream with uniform probability.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/11-20/Problem15.js)
+
+---
