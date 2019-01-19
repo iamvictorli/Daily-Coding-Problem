@@ -1,7 +1,8 @@
 import getWordsWithPrefix from '../11-20/Problem11';
 import { climbStairs1, climbStairs2 } from '../11-20/Problem12';
-import KLongestSubstring from '../11-20/Problem13';
+import kLongestSubstring from '../11-20/Problem13';
 import selectRandomizer from '../11-20/Problem15';
+import Log from '../11-20/Problem16';
 
 describe('Problems 11 - 20', () => {
   test('Problem 11 Get all words with prefix', () => {
@@ -61,18 +62,18 @@ describe('Problems 11 - 20', () => {
   });
 
   test('Problem 13 Longest Substring With K Distinct Characters', () => {
-    expect(KLongestSubstring('abcba', 2)).toBe('bcb');
-    expect(KLongestSubstring('abaacca', 2)).toBe('aacca');
-    expect(KLongestSubstring('eceba', 2)).toBe('ece');
+    expect(kLongestSubstring('abcba', 2)).toBe('bcb');
+    expect(kLongestSubstring('abaacca', 2)).toBe('aacca');
+    expect(kLongestSubstring('eceba', 2)).toBe('ece');
 
     // can be any one of these values
-    expect(['aa', 'bb', 'cc']).toContain(KLongestSubstring('aabbcc', 1));
-    expect(['aabb', 'bbcc']).toContain(KLongestSubstring('aabbcc', 2));
-    expect(KLongestSubstring('aabbcc', 3)).toBe('aabbcc');
-    expect(KLongestSubstring('aaaccc', 2)).toBe('aaaccc');
+    expect(['aa', 'bb', 'cc']).toContain(kLongestSubstring('aabbcc', 1));
+    expect(['aabb', 'bbcc']).toContain(kLongestSubstring('aabbcc', 2));
+    expect(kLongestSubstring('aabbcc', 3)).toBe('aabbcc');
+    expect(kLongestSubstring('aaaccc', 2)).toBe('aaaccc');
 
-    expect(KLongestSubstring('abcbbbbcccbdddadacb', 2)).toBe('bcbbbbcccb');
-    expect(KLongestSubstring('abcadcacacaca', 3)).toBe('cadcacacaca');
+    expect(kLongestSubstring('abcbbbbcccbdddadacb', 2)).toBe('bcbbbbcccb');
+    expect(kLongestSubstring('abcadcacacaca', 3)).toBe('cadcacacaca');
   });
 
   test('Problem 15 Select Random Element From Stream of Elements', () => {
@@ -90,5 +91,29 @@ describe('Problems 11 - 20', () => {
     expect([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]).toContain(
       rand3
     );
+  });
+
+  test('Problem 16 Record and Get ith last element', () => {
+    const orderLog = new Log(5);
+    orderLog.record(111);
+    orderLog.record(222);
+    orderLog.record(333);
+    orderLog.record(444);
+    orderLog.record(555);
+
+    expect(orderLog.getLast(1)).toBe(555);
+    expect(orderLog.getLast(2)).toBe(444);
+    expect(orderLog.getLast(3)).toBe(333);
+    expect(orderLog.getLast(4)).toBe(222);
+    expect(orderLog.getLast(5)).toBe(111);
+
+    orderLog.record(666);
+    orderLog.record(777);
+
+    expect(orderLog.getLast(1)).toBe(777);
+    expect(orderLog.getLast(2)).toBe(666);
+    expect(orderLog.getLast(3)).toBe(555);
+    expect(orderLog.getLast(4)).toBe(444);
+    expect(orderLog.getLast(5)).toBe(333);
   });
 });

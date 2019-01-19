@@ -1,4 +1,4 @@
-/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "^SumNonAdjacent" }] */
+/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "^sumNonAdjacent" }] */
 
 // Problem 9
 //
@@ -23,9 +23,9 @@
  * @param {number[]} nums
  * @return {number}
  */
-function SumNonAdjacent(nums) {
-  // return SumNonAdjacentDP(nums);
-  return SumNonAdjacentC(nums);
+function sumNonAdjacent(nums) {
+  // return sumNonAdjacentDP(nums);
+  return sumNonAdjacentC(nums);
 }
 
 /**
@@ -33,7 +33,7 @@ function SumNonAdjacent(nums) {
  * @param {number[]} nums
  * @return {number}
  */
-function SumNonAdjacentDP(nums) {
+function sumNonAdjacentDP(nums) {
   if (nums.length === 0) return 0;
 
   if (nums.length === 1) return Math.max(0, nums[0]);
@@ -54,7 +54,7 @@ function SumNonAdjacentDP(nums) {
  * @param {number[]} nums
  * @return {number}
  */
-function SumNonAdjacentC(nums) {
+function sumNonAdjacentC(nums) {
   if (nums.length === 0) return 0;
 
   if (nums.length === 1) return Math.max(0, nums[0]);
@@ -70,4 +70,4 @@ function SumNonAdjacentC(nums) {
   return curr;
 }
 
-export default SumNonAdjacent;
+export default sumNonAdjacent;

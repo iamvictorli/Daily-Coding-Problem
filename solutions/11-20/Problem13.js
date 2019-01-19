@@ -17,7 +17,7 @@
  * @param {number} k
  * @return {string}
  */
-function KLongestSubstring(string, k) {
+function kLongestSubstring(string, k) {
   let l = 0;
   let r = 0;
   const charCount = new Map();
@@ -55,4 +55,4 @@ function KLongestSubstring(string, k) {
   return longestSubstring;
 }
 
-export default KLongestSubstring;
+export default kLongestSubstring;

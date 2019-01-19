@@ -10,10 +10,10 @@
  * @param {function} fn
  * @param {number} n
  */
-function Schedule(fn, n) {
+function schedule(fn, n) {
   setTimeout(() => {
     fn();
   }, n);
 }
 
-export default Schedule;
+export default schedule;

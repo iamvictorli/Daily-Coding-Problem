@@ -1,4 +1,4 @@
-/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "^CountUnivalSubtrees" }] */
+/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "^countUnivalSubtrees" }] */
 
 // Problem 8
 //
@@ -42,9 +42,9 @@ class TreeNode {
  * @param {TreeNode} root
  * @return {number}
  */
-function CountUnivalSubtrees(root) {
-  // return CountUnivalSubtreesS(root);
-  return CountUnivalSubtreesF(root);
+function countUnivalSubtrees(root) {
+  // return countUnivalSubtreesS(root);
+  return countUnivalSubtreesF(root);
 }
 
 /**
@@ -52,10 +52,10 @@ function CountUnivalSubtrees(root) {
  * @param {TreeNode} root
  * @return {number}
  */
-function CountUnivalSubtreesS(root) {
+function countUnivalSubtreesS(root) {
   if (root === null) return 0;
-  const leftCount = CountUnivalSubtrees(root.left);
-  const rightCount = CountUnivalSubtrees(root.right);
+  const leftCount = countUnivalSubtrees(root.left);
+  const rightCount = countUnivalSubtrees(root.right);
 
   if (isUnival(root)) return 1 + leftCount + rightCount;
   return leftCount + rightCount;
@@ -90,9 +90,9 @@ function univalHelper(root, val) {
  * @param {TreeNode} root
  * @return {number}
  */
-function CountUnivalSubtreesF(root) {
+function countUnivalSubtreesF(root) {
   const res = [0];
-  CountUnivalSubtreesFHelper(root, res);
+  countUnivalSubtreesFHelper(root, res);
   return res[0];
 }
 
@@ -101,11 +101,11 @@ function CountUnivalSubtreesF(root) {
  * @param {number[]} res
  * @return {boolean}
  */
-function CountUnivalSubtreesFHelper(root, res) {
+function countUnivalSubtreesFHelper(root, res) {
   if (root === null) return true;
 
-  const isLeftUnival = CountUnivalSubtreesFHelper(root.left, res);
-  const isRightUnival = CountUnivalSubtreesFHelper(root.right, res);
+  const isLeftUnival = countUnivalSubtreesFHelper(root.left, res);
+  const isRightUnival = countUnivalSubtreesFHelper(root.right, res);
 
   if (isLeftUnival && isRightUnival) {
     if (root.left !== null && root.val !== root.left.val) return false;
@@ -117,4 +117,4 @@ function CountUnivalSubtreesFHelper(root, res) {
   return false;
 }
 
-export default CountUnivalSubtrees;
+export default countUnivalSubtrees;
