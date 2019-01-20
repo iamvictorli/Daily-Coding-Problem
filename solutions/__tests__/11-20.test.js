@@ -3,9 +3,10 @@ import { climbStairs1, climbStairs2 } from '../11-20/Problem12';
 import kLongestSubstring from '../11-20/Problem13';
 import selectRandomizer from '../11-20/Problem15';
 import Log from '../11-20/Problem16';
+import longestFilePath from '../11-20/Problem17';
 
 describe('Problems 11 - 20', () => {
-  test('Problem 11 Get all words with prefix', () => {
+  test('Problem 11 Get All Words With Prefix', () => {
     expect(getWordsWithPrefix('de', ['dog', 'deer', 'deal'])).toEqual(
       expect.arrayContaining(['deer', 'deal'])
     );
@@ -115,5 +116,36 @@ describe('Problems 11 - 20', () => {
     expect(orderLog.getLast(3)).toBe(555);
     expect(orderLog.getLast(4)).toBe(444);
     expect(orderLog.getLast(5)).toBe(333);
+  });
+
+  test('Problem 17 Get the Longest Absolute Path to a File', () => {
+    expect(
+      longestFilePath(
+        'dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext'
+      )
+    ).toBe(32);
+
+    expect(
+      longestFilePath(
+        'dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext\n\t\t\tfile22.ext'
+      )
+    ).toBe(33);
+
+    expect(
+      longestFilePath(
+        'dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir11\n\t\t\tfile11.ext\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext\n\t\t\tfile22.ext'
+      )
+    ).toBe(34);
+
+    expect(longestFilePath('dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext')).toBe(20);
+
+    expect(longestFilePath('dir\n\tsubdir1\n\tsubdir2\n\tsubdir3')).toBe(0);
+
+    expect(
+      longestFilePath('dir\n\tsubdir1\n\t\tsubsubdir1\n\tsubdir2\n\tsubdir3')
+    ).toBe(0);
+
+    expect(longestFilePath('dir')).toBe(0);
+    expect(longestFilePath('dir\n\tfile1.txt')).toBe(13);
   });
 });
