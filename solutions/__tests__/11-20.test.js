@@ -4,6 +4,7 @@ import kLongestSubstring from '../11-20/Problem13';
 import selectRandomizer from '../11-20/Problem15';
 import Log from '../11-20/Problem16';
 import longestFilePath from '../11-20/Problem17';
+import maxSubArrayLengthK from '../11-20/Problem18';
 
 describe('Problems 11 - 20', () => {
   test('Problem 11 Get All Words With Prefix', () => {
@@ -147,5 +148,36 @@ describe('Problems 11 - 20', () => {
 
     expect(longestFilePath('dir')).toBe(0);
     expect(longestFilePath('dir\n\tfile1.txt')).toBe(13);
+  });
+
+  test('Problem 18 Maximum Values of each SubArray of Length k', () => {
+    expect(maxSubArrayLengthK([10, 5, 2, 7, 8, 7], 3)).toEqual([10, 7, 8, 8]);
+    expect(maxSubArrayLengthK([10, 5, 2, 7, 8, 7], 1)).toEqual([
+      10,
+      5,
+      2,
+      7,
+      8,
+      7
+    ]);
+
+    expect(maxSubArrayLengthK([10, 5, 2, 7, 8, 7], 2)).toEqual([
+      10,
+      5,
+      7,
+      8,
+      8
+    ]);
+    expect(maxSubArrayLengthK([11, 22], 2)).toEqual([22]);
+    expect(maxSubArrayLengthK([11, 33, 22], 3)).toEqual([33]);
+
+    expect(maxSubArrayLengthK([1, 3, -1, -3, 5, 3, 6, 7], 3)).toEqual([
+      3,
+      3,
+      5,
+      5,
+      6,
+      7
+    ]);
   });
 });
