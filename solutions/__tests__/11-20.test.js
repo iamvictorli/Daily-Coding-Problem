@@ -5,6 +5,7 @@ import selectRandomizer from '../11-20/Problem15';
 import Log from '../11-20/Problem16';
 import longestFilePath from '../11-20/Problem17';
 import maxSubArrayLengthK from '../11-20/Problem18';
+import minCostHouseColor from '../11-20/Problem19';
 
 describe('Problems 11 - 20', () => {
   test('Problem 11 Get All Words With Prefix', () => {
@@ -179,5 +180,26 @@ describe('Problems 11 - 20', () => {
       6,
       7
     ]);
+  });
+
+  test('Problem 19 Paint House in Color With Minimal Cost', () => {
+    expect(minCostHouseColor([[17, 2, 17], [16, 16, 5], [14, 3, 9]])).toBe(10);
+
+    expect(
+      minCostHouseColor([
+        [8, 6, 6, 7, 5, 4],
+        [7, 7, 8, 2, 2, 2],
+        [9, 9, 4, 3, 2, 1]
+      ])
+    ).toBe(7);
+
+    expect(
+      minCostHouseColor([
+        [7, 3, 3, 8, 1, 2],
+        [2, 3, 4, 2, 4, 3],
+        [4, 5, 9, 8, 1, 6],
+        [6, 7, 9, 8, 1, 4]
+      ])
+    ).toBe(8);
   });
 });
