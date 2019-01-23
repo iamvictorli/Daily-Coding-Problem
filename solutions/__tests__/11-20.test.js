@@ -1,3 +1,5 @@
+import LinkedListNode from '../Data-Structures/LinkedListNode';
+
 import getWordsWithPrefix from '../11-20/Problem11';
 import { climbStairs1, climbStairs2 } from '../11-20/Problem12';
 import kLongestSubstring from '../11-20/Problem13';
@@ -6,6 +8,7 @@ import Log from '../11-20/Problem16';
 import longestFilePath from '../11-20/Problem17';
 import maxSubArrayLengthK from '../11-20/Problem18';
 import minCostHouseColor from '../11-20/Problem19';
+import findIntersection from '../11-20/Problem20';
 
 describe('Problems 11 - 20', () => {
   test('Problem 11 Get All Words With Prefix', () => {
@@ -201,5 +204,64 @@ describe('Problems 11 - 20', () => {
         [6, 7, 9, 8, 1, 4]
       ])
     ).toBe(8);
+  });
+
+  test('Problem 20 Intersection of Two Linked Lists', () => {
+    let list1 = new LinkedListNode(3);
+    list1.next = new LinkedListNode(7);
+
+    let list2 = new LinkedListNode(99);
+    list2.next = new LinkedListNode(1);
+
+    let intersecting = new LinkedListNode(8);
+    intersecting.next = new LinkedListNode(10);
+
+    list1.next.next = intersecting;
+    list2.next.next = intersecting;
+
+    expect(findIntersection(list1, list2)).toEqual(intersecting);
+
+    list1 = new LinkedListNode(4);
+    list1.next = new LinkedListNode(1);
+
+    list2 = new LinkedListNode(5);
+    list2.next = new LinkedListNode(0);
+    list2.next.next = new LinkedListNode(1);
+
+    intersecting = new LinkedListNode(8);
+    intersecting.next = new LinkedListNode(4);
+    intersecting.next.next = new LinkedListNode(5);
+
+    list1.next.next = intersecting;
+    list2.next.next.next = intersecting;
+
+    expect(findIntersection(list1, list2)).toEqual(intersecting);
+
+    list1 = new LinkedListNode(0);
+    list1.next = new LinkedListNode(9);
+    list1.next.next = new LinkedListNode(1);
+
+    list2 = new LinkedListNode(3);
+
+    intersecting = new LinkedListNode(2);
+    intersecting.next = new LinkedListNode(4);
+
+    list1.next.next.next = intersecting;
+    list2.next = intersecting;
+
+    expect(findIntersection(list1, list2)).toEqual(intersecting);
+
+    list1 = new LinkedListNode(2);
+    list1.next = new LinkedListNode(6);
+    list1.next.next = new LinkedListNode(4);
+
+    list2 = new LinkedListNode(1);
+    list2.next = new LinkedListNode(5);
+
+    expect(findIntersection(list1, list2)).toEqual(null);
+
+    list1 = new LinkedListNode(1);
+    list2 = null;
+    expect(findIntersection(list1, list2)).toEqual(null);
   });
 });
