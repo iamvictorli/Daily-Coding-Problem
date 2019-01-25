@@ -32,6 +32,7 @@
     "@babel/preset-env": "^7.2.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
+    "lodash.isequal": "^4.5.0",
     "regenerator-runtime": "^0.13.1"
   }
 }
