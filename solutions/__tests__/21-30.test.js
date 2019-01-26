@@ -1,6 +1,7 @@
 import isEqual from 'lodash.isequal';
 import minRooms from '../21-30/Problem21';
 import wordBreak from '../21-30/Problem22';
+import findMinPath from '../21-30/Problem23';
 
 describe('Problems 21 - 30', () => {
   test('Problem 21 Minimum Rooms Required', () => {
@@ -43,5 +44,55 @@ describe('Problems 21 - 30', () => {
           ['bedbath', 'and', 'beyond']
         )
     ).toBe(true);
+  });
+
+  test('Problem 23 Find the Minimum Path', () => {
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [3, 0],
+        [0, 0]
+      )
+    ).toBe(7);
+
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [3, 3],
+        [0, 0]
+      )
+    ).toBe(6);
+
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [3, 0],
+        [0, 0]
+      )
+    ).toBe(-1);
+
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [0, 0],
+        [0, 3]
+      )
+    ).toBe(3);
+
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [3, 0],
+        [3, 0]
+      )
+    ).toBe(0);
+
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [3, 0],
+        [3, 3]
+      )
+    ).toBe(3);
   });
 });
