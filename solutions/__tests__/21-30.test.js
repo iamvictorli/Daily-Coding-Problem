@@ -3,6 +3,7 @@ import minRooms from '../21-30/Problem21';
 import wordBreak from '../21-30/Problem22';
 import findMinPath from '../21-30/Problem23';
 import { LockingTreeNode, isLocked, lock, unlock } from '../21-30/Problem24';
+import matchesRegularExpression from '../21-30/Problem25';
 
 describe('Problems 21 - 30', () => {
   test('Problem 21 Minimum Rooms Required', () => {
@@ -144,5 +145,23 @@ describe('Problems 21 - 30', () => {
     expect(isLocked(c)).toBe(false);
     expect(lock(b)).toBe(true);
     expect(lock(a)).toBe(false);
+  });
+
+  test('Problem 25 Regular Expression', () => {
+    expect(matchesRegularExpression('ra.', 'ray')).toBe(true);
+    expect(matchesRegularExpression('.*at', 'chat')).toBe(true);
+    expect(matchesRegularExpression('.*at', 'chats')).toBe(false);
+    expect(matchesRegularExpression('a', 'aa')).toBe(false);
+    expect(matchesRegularExpression('a*', 'a')).toBe(true);
+    expect(matchesRegularExpression('.*', 'ab')).toBe(true);
+    expect(matchesRegularExpression('c*a*b', 'aab')).toBe(true);
+    expect(matchesRegularExpression('mis*is*p*', 'mississippi')).toBe(false);
+    expect(matchesRegularExpression('ab*a*c*a', 'aaa')).toBe(true);
+    expect(
+      matchesRegularExpression(
+        'aasdf.*asdf.*asdf.*asdf.*s',
+        'aasdfasdfasdfasdfas'
+      )
+    ).toBe(true);
   });
 });

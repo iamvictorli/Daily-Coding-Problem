@@ -19,7 +19,6 @@
 // O(1) Time complexity for isLocked and O(h) Time complexity for lock and unlock
 // O(1) Space compleixty for all of the three methods
 
-// eslint-disable-next-line
 class LockingTreeNode {
   /**
    * Initialize a binary tree node with a value and/or left and right nodes
