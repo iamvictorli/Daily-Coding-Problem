@@ -1,9 +1,12 @@
 import isEqual from 'lodash.isequal';
+import LinkedListNode from '../Data-Structures/LinkedListNode';
+
 import minRooms from '../21-30/Problem21';
 import wordBreak from '../21-30/Problem22';
 import findMinPath from '../21-30/Problem23';
 import { LockingTreeNode, isLocked, lock, unlock } from '../21-30/Problem24';
 import matchesRegularExpression from '../21-30/Problem25';
+import removeKthLast from '../21-30/Problem26';
 
 describe('Problems 21 - 30', () => {
   test('Problem 21 Minimum Rooms Required', () => {
@@ -163,5 +166,31 @@ describe('Problems 21 - 30', () => {
         'aasdfasdfasdfasdfas'
       )
     ).toBe(true);
+  });
+
+  test('Problem 26 Remove Kth Last in Linked List', () => {
+    let list = new LinkedListNode(1);
+    list.next = new LinkedListNode(2);
+    list.next.next = new LinkedListNode(3);
+    list.next.next.next = new LinkedListNode(4);
+    list.next.next.next.next = new LinkedListNode(5);
+
+    list = removeKthLast(list, 2);
+    expect(list.val).toBe(1);
+    expect(list.next.val).toBe(2);
+    expect(list.next.next.val).toBe(3);
+    expect(list.next.next.next.val).toBe(5);
+    expect(list.next.next.next.next).toBeNull();
+
+    const newHead = new LinkedListNode(0);
+    newHead.next = list;
+    list = newHead;
+
+    list = removeKthLast(list, 5);
+    expect(list.val).toBe(1);
+    expect(list.next.val).toBe(2);
+    expect(list.next.next.val).toBe(3);
+    expect(list.next.next.next.val).toBe(5);
+    expect(list.next.next.next.next).toBeNull();
   });
 });
