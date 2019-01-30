@@ -7,6 +7,7 @@ import findMinPath from '../21-30/Problem23';
 import { LockingTreeNode, isLocked, lock, unlock } from '../21-30/Problem24';
 import matchesRegularExpression from '../21-30/Problem25';
 import removeKthLast from '../21-30/Problem26';
+import validBrackets from '../21-30/Problem27';
 
 describe('Problems 21 - 30', () => {
   test('Problem 21 Minimum Rooms Required', () => {
@@ -192,5 +193,16 @@ describe('Problems 21 - 30', () => {
     expect(list.next.next.val).toBe(3);
     expect(list.next.next.next.val).toBe(5);
     expect(list.next.next.next.next).toBeNull();
+  });
+
+  test('Problem 27 Valid Brackets', () => {
+    expect(validBrackets('([])[]({})')).toBe(true);
+    expect(validBrackets('([)]')).toBe(false);
+    expect(validBrackets('((()')).toBe(false);
+    expect(validBrackets('()')).toBe(true);
+    expect(validBrackets('()[]{}')).toBe(true);
+    expect(validBrackets('(]')).toBe(false);
+    expect(validBrackets('([)]')).toBe(false);
+    expect(validBrackets('{[]}')).toBe(true);
   });
 });

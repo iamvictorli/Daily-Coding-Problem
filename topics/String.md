@@ -117,3 +117,17 @@ Given the regular expression ".*at" and the string "chat", your function should 
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/21-30/Problem25.js)
 
 ---
+
+## Problem 27
+
+This problem was asked by Facebook.
+
+Given a string of round, curly, and square open and closing brackets, return whether the brackets are balanced (well-formed).
+
+For example, given the string `"([])[]({})"`, you should return true.
+
+Given the string `"([)]"` or `"((()"`, you should return false.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/21-30/Problem27.js)
+
+---
