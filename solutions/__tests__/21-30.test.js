@@ -8,6 +8,7 @@ import { LockingTreeNode, isLocked, lock, unlock } from '../21-30/Problem24';
 import matchesRegularExpression from '../21-30/Problem25';
 import removeKthLast from '../21-30/Problem26';
 import validBrackets from '../21-30/Problem27';
+import textJustification from '../21-30/Problem28';
 
 describe('Problems 21 - 30', () => {
   test('Problem 21 Minimum Rooms Required', () => {
@@ -204,5 +205,14 @@ describe('Problems 21 - 30', () => {
     expect(validBrackets('(]')).toBe(false);
     expect(validBrackets('([)]')).toBe(false);
     expect(validBrackets('{[]}')).toBe(true);
+  });
+
+  test('Problem 28 Text Justification', () => {
+    expect(
+      textJustification(
+        ['the', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog'],
+        16
+      )
+    ).toEqual(['the  quick brown', 'fox  jumps  over', 'the   lazy   dog']);
   });
 });
