@@ -9,6 +9,7 @@ import matchesRegularExpression from '../21-30/Problem25';
 import removeKthLast from '../21-30/Problem26';
 import validBrackets from '../21-30/Problem27';
 import textJustification from '../21-30/Problem28';
+import { stringEncoding, stringDecoding } from '../21-30/Problem29';
 
 describe('Problems 21 - 30', () => {
   test('Problem 21 Minimum Rooms Required', () => {
@@ -214,5 +215,25 @@ describe('Problems 21 - 30', () => {
         16
       )
     ).toEqual(['the  quick brown', 'fox  jumps  over', 'the   lazy   dog']);
+  });
+
+  test('Problem 29 String Encoding and Decoding', () => {
+    expect(stringEncoding('A')).toBe('1A');
+    expect(stringEncoding('AA')).toBe('2A');
+    expect(stringEncoding('AAB')).toBe('2A1B');
+    expect(stringEncoding('AABC')).toBe('2A1B1C');
+
+    expect(stringDecoding('1A')).toBe('A');
+    expect(stringDecoding('2A')).toBe('AA');
+    expect(stringDecoding('2A1B')).toBe('AAB');
+    expect(stringDecoding('2A1B1C')).toBe('AABC');
+    expect(stringDecoding('15A')).toBe('AAAAAAAAAAAAAAA');
+    expect(stringDecoding('15A1B')).toBe('AAAAAAAAAAAAAAAB');
+
+    expect(stringEncoding('AAAABBBCCDAA')).toBe('4A3B2C1D2A');
+    expect(stringDecoding('4A3B2C1D2A')).toBe('AAAABBBCCDAA');
+
+    expect(stringDecoding(stringEncoding('AAAABBBCCDAA'))).toBe('AAAABBBCCDAA');
+    expect(stringEncoding(stringDecoding('4A3B2C1D2A'))).toBe('4A3B2C1D2A');
   });
 });
