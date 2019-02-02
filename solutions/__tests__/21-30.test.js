@@ -10,6 +10,7 @@ import removeKthLast from '../21-30/Problem26';
 import validBrackets from '../21-30/Problem27';
 import textJustification from '../21-30/Problem28';
 import { stringEncoding, stringDecoding } from '../21-30/Problem29';
+import trappingRainWater from '../21-30/Problem30';
 
 describe('Problems 21 - 30', () => {
   test('Problem 21 Minimum Rooms Required', () => {
@@ -235,5 +236,11 @@ describe('Problems 21 - 30', () => {
 
     expect(stringDecoding(stringEncoding('AAAABBBCCDAA'))).toBe('AAAABBBCCDAA');
     expect(stringEncoding(stringDecoding('4A3B2C1D2A'))).toBe('4A3B2C1D2A');
+  });
+
+  test('Problem 30 Trapping Rain Water', () => {
+    expect(trappingRainWater([2, 1, 2])).toBe(1);
+    expect(trappingRainWater([3, 0, 1, 3, 0, 5])).toBe(8);
+    expect(trappingRainWater([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1])).toBe(6);
   });
 });

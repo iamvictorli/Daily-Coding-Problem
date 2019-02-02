@@ -258,10 +258,10 @@ describe('Problems 11 - 20', () => {
     list2 = new LinkedListNode(1);
     list2.next = new LinkedListNode(5);
 
-    expect(findIntersection(list1, list2)).toEqual(null);
+    expect(findIntersection(list1, list2)).toBeNull();
 
     list1 = new LinkedListNode(1);
     list2 = null;
-    expect(findIntersection(list1, list2)).toEqual(null);
+    expect(findIntersection(list1, list2)).toBeNull();
   });
 });

@@ -26,7 +26,7 @@ describe('Problems 1 - 10', () => {
   });
 
   test('Problem 3 Serialize And Deserialize Binary Tree', () => {
-    expect(deserialize(serialize(null))).toBe(null);
+    expect(deserialize(serialize(null))).toBeNull();
 
     const node = new TreeNode(
       'root',
