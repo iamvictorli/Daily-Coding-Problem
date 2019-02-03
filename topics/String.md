@@ -169,3 +169,15 @@ Implement run-length encoding and decoding. You can assume the string to be enco
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/21-30/Problem29.js)
 
 ---
+
+## Problem 31
+
+This problem was asked by Google.
+
+The edit distance between two strings refers to the minimum number of character insertions, deletions, and substitutions required to change one string to the other. For example, the edit distance between “kitten” and “sitting” is three: substitute the “k” for “s”, substitute the “e” for “i”, and append a “g”.
+
+Given two strings, compute the edit distance between them.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/31-40/Problem31.js)
+
+---
