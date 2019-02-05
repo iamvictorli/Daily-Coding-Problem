@@ -1,5 +1,6 @@
 import editDistance from '../31-40/Problem31';
 import doesArbitrageExist from '../31-40/Problem32';
+import runningMedian from '../31-40/Problem33';
 
 describe('Problem 31 - 40', () => {
   test('Problem 31 Edit Distance', () => {
@@ -27,5 +28,18 @@ describe('Problem 31 - 40', () => {
         [1.0567, 0.8609, 0.6767, 83.12, 1.0339, 1.0487, 1]
       ])
     ).toBe(true);
+  });
+
+  test('Problem 33 Find Median from Data Stream', () => {
+    expect(runningMedian([2, 1, 5, 7, 2, 0, 5])).toEqual([
+      2,
+      1.5,
+      2,
+      3.5,
+      2,
+      2,
+      2
+    ]);
+    expect(runningMedian([1, 2, 3])).toEqual([1, 1.5, 2]);
   });
 });
