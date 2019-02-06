@@ -7,6 +7,7 @@ import buildPalindromeByFewestInsertions from '../31-40/Problem34';
 import sortColors from '../31-40/Problem35';
 import secondLargest from '../31-40/Problem36';
 import powerSet from '../31-40/Problem37';
+import totalNQueens from '../31-40/Problem38';
 
 describe('Problem 31 - 40', () => {
   test('Problem 31 Edit Distance', () => {
@@ -150,5 +151,14 @@ describe('Problem 31 - 40', () => {
       expect.arrayContaining([[2], [1], [1, 2, 2], [2, 2], [1, 2], []])
     );
     expect(powerSet([1, 2, 2])).toHaveLength(6);
+  });
+
+  test('Problem 38 Total N Queens', () => {
+    expect(totalNQueens(4)).toBe(2);
+    expect(totalNQueens(3)).toBe(0);
+    expect(totalNQueens(5)).toBe(10);
+    expect(totalNQueens(6)).toBe(4);
+    expect(totalNQueens(2)).toBe(0);
+    expect(totalNQueens(1)).toBe(1);
   });
 });
