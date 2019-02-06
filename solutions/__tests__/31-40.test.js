@@ -2,6 +2,7 @@ import editDistance from '../31-40/Problem31';
 import doesArbitrageExist from '../31-40/Problem32';
 import runningMedian from '../31-40/Problem33';
 import buildPalindromeByFewestInsertions from '../31-40/Problem34';
+import sortColors from '../31-40/Problem35';
 
 describe('Problem 31 - 40', () => {
   test('Problem 31 Edit Distance', () => {
@@ -51,5 +52,35 @@ describe('Problem 31 - 40', () => {
     expect(buildPalindromeByFewestInsertions('aacecaaa')).toBe('aaacecaaa');
     expect(buildPalindromeByFewestInsertions('aaaecaaa')).toBe('aaacecaaa');
     expect(buildPalindromeByFewestInsertions('abcd')).toBe('abcdcba');
+  });
+
+  test('Problem 35 Sort Colors', () => {
+    let colors = ['G', 'B', 'R', 'R', 'B', 'R', 'G'];
+    sortColors(colors);
+    expect(colors).toEqual(['R', 'R', 'R', 'G', 'G', 'B', 'B']);
+
+    colors = ['B', 'R', 'B', 'G', 'G', 'R'];
+    sortColors(colors);
+    expect(colors).toEqual(['R', 'R', 'G', 'G', 'B', 'B']);
+
+    colors = ['B', 'B', 'B', 'G', 'R', 'R'];
+    sortColors(colors);
+    expect(colors).toEqual(['R', 'R', 'G', 'B', 'B', 'B']);
+
+    colors = ['B', 'B', 'B'];
+    sortColors(colors);
+    expect(colors).toEqual(['B', 'B', 'B']);
+
+    colors = ['R', 'R', 'R'];
+    sortColors(colors);
+    expect(colors).toEqual(['R', 'R', 'R']);
+
+    colors = ['G', 'G', 'G'];
+    sortColors(colors);
+    expect(colors).toEqual(['G', 'G', 'G']);
+
+    colors = ['R', 'B', 'G'];
+    sortColors(colors);
+    expect(colors).toEqual(['R', 'G', 'B']);
   });
 });
