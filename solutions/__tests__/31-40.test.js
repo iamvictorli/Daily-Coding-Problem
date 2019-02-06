@@ -6,6 +6,7 @@ import runningMedian from '../31-40/Problem33';
 import buildPalindromeByFewestInsertions from '../31-40/Problem34';
 import sortColors from '../31-40/Problem35';
 import secondLargest from '../31-40/Problem36';
+import powerSet from '../31-40/Problem37';
 
 describe('Problem 31 - 40', () => {
   test('Problem 31 Edit Distance', () => {
@@ -117,5 +118,37 @@ describe('Problem 31 - 40', () => {
     bst.left.right.right = new TreeNode(14);
 
     expect(secondLargest(bst).val).toBe(14);
+  });
+
+  test('Problem 37 Power Set', () => {
+    expect(powerSet([1, 2, 3])).toEqual(
+      expect.arrayContaining([
+        [],
+        [1],
+        [2],
+        [3],
+        [1, 2],
+        [1, 3],
+        [2, 3],
+        [1, 2, 3]
+      ])
+    );
+    expect(powerSet([1, 2, 3])).toHaveLength(8);
+
+    expect(powerSet([1, 2])).toEqual(
+      expect.arrayContaining([[], [1], [2], [1, 2]])
+    );
+    expect(powerSet([1, 2])).toHaveLength(4);
+
+    expect(powerSet([1])).toEqual(expect.arrayContaining([[], [1]]));
+    expect(powerSet([1])).toHaveLength(2);
+
+    expect(powerSet([])).toEqual(expect.arrayContaining([[]]));
+    expect(powerSet([])).toHaveLength(1);
+
+    expect(powerSet([1, 2, 2])).toEqual(
+      expect.arrayContaining([[2], [1], [1, 2, 2], [2, 2], [1, 2], []])
+    );
+    expect(powerSet([1, 2, 2])).toHaveLength(6);
   });
 });
