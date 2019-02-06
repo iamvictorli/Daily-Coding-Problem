@@ -1,6 +1,7 @@
 import editDistance from '../31-40/Problem31';
 import doesArbitrageExist from '../31-40/Problem32';
 import runningMedian from '../31-40/Problem33';
+import buildPalindromeByFewestInsertions from '../31-40/Problem34';
 
 describe('Problem 31 - 40', () => {
   test('Problem 31 Edit Distance', () => {
@@ -41,5 +42,14 @@ describe('Problem 31 - 40', () => {
       2
     ]);
     expect(runningMedian([1, 2, 3])).toEqual([1, 1.5, 2]);
+  });
+
+  test('Problem 34 Build Palindrome With Fewest Insertions', () => {
+    expect(buildPalindromeByFewestInsertions('race')).toBe('ecarace');
+    expect(buildPalindromeByFewestInsertions('google')).toBe('elgoogle');
+    expect(buildPalindromeByFewestInsertions('racecar')).toBe('racecar');
+    expect(buildPalindromeByFewestInsertions('aacecaaa')).toBe('aaacecaaa');
+    expect(buildPalindromeByFewestInsertions('aaaecaaa')).toBe('aaacecaaa');
+    expect(buildPalindromeByFewestInsertions('abcd')).toBe('abcdcba');
   });
 });
