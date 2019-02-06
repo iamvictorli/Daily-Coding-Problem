@@ -1,8 +1,11 @@
+import TreeNode from '../Data-Structures/TreeNode';
+
 import editDistance from '../31-40/Problem31';
 import doesArbitrageExist from '../31-40/Problem32';
 import runningMedian from '../31-40/Problem33';
 import buildPalindromeByFewestInsertions from '../31-40/Problem34';
 import sortColors from '../31-40/Problem35';
+import secondLargest from '../31-40/Problem36';
 
 describe('Problem 31 - 40', () => {
   test('Problem 31 Edit Distance', () => {
@@ -82,5 +85,37 @@ describe('Problem 31 - 40', () => {
     colors = ['R', 'B', 'G'];
     sortColors(colors);
     expect(colors).toEqual(['R', 'G', 'B']);
+  });
+
+  test('Problem 36 Second Largest Element in Binary Search Tree', () => {
+    let bst = new TreeNode(20);
+    bst.left = new TreeNode(8);
+    bst.right = new TreeNode(22);
+    bst.left.left = new TreeNode(4);
+    bst.left.right = new TreeNode(12);
+    bst.right.left = new TreeNode(21);
+    bst.left.right.left = new TreeNode(10);
+    bst.left.right.right = new TreeNode(14);
+
+    expect(secondLargest(bst).val).toBe(21);
+
+    bst = new TreeNode(20);
+    bst.left = new TreeNode(8);
+    bst.right = new TreeNode(22);
+    bst.left.left = new TreeNode(4);
+    bst.left.right = new TreeNode(12);
+    bst.left.right.left = new TreeNode(10);
+    bst.left.right.right = new TreeNode(14);
+
+    expect(secondLargest(bst).val).toBe(20);
+
+    bst = new TreeNode(20);
+    bst.left = new TreeNode(8);
+    bst.left.left = new TreeNode(4);
+    bst.left.right = new TreeNode(12);
+    bst.left.right.left = new TreeNode(10);
+    bst.left.right.right = new TreeNode(14);
+
+    expect(secondLargest(bst).val).toBe(14);
   });
 });
