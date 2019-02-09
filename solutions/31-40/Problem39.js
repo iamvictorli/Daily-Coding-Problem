@@ -19,16 +19,16 @@
 //
 // https://leetcode.com/problems/game-of-life/
 
-function printBoard(liveCells) {}
+// function printBoard(liveCells) {}
 
-function iterate(liveCells) {}
+// function iterate(liveCells) {}
 
-function gameOfLife(liveCells, steps) {
-  printBoard(liveCells);
-  for (let i = 0; i < steps; i++) {
-    liveCells = iterate(liveCells);
-    printBoard(liveCells);
-  }
-}
+// function gameOfLife(liveCells, steps) {
+//   printBoard(liveCells);
+//   for (let i = 0; i < steps; i++) {
+//     liveCells = iterate(liveCells);
+//     printBoard(liveCells);
+//   }
+// }
 
-export default gameOfLife;
+// export default gameOfLife;

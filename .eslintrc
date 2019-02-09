@@ -9,6 +9,7 @@
     "no-plusplus": "off",
     "no-param-reassign": "off",
     "no-use-before-define": ["error", { "functions": false }],
-    "no-continue": "off"
+    "no-continue": "off",
+    "no-bitwise": "off"
   }
 }

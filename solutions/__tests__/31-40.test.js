@@ -8,6 +8,7 @@ import sortColors from '../31-40/Problem35';
 import secondLargest from '../31-40/Problem36';
 import powerSet from '../31-40/Problem37';
 import totalNQueens from '../31-40/Problem38';
+import singleNumber from '../31-40/Problem40';
 
 describe('Problem 31 - 40', () => {
   test('Problem 31 Edit Distance', () => {
@@ -160,5 +161,10 @@ describe('Problem 31 - 40', () => {
     expect(totalNQueens(6)).toBe(4);
     expect(totalNQueens(2)).toBe(0);
     expect(totalNQueens(1)).toBe(1);
+  });
+
+  test('Problem 40 Single Number', () => {
+    expect(singleNumber([6, 1, 3, 3, 3, 6, 6])).toBe(1);
+    expect(singleNumber([13, 19, 13, 13])).toBe(19);
   });
 });
