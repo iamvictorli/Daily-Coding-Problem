@@ -66,5 +66,22 @@ describe('Data Structures Test', () => {
     expect(() => {
       maxHeap.peek();
     }).toThrowError('No more items in heap');
+
+    const lexicalOrderHeap = new Heap((a, b) => b.localeCompare(a));
+    lexicalOrderHeap.add('BBB');
+    lexicalOrderHeap.add('AAA');
+    lexicalOrderHeap.add('CCC');
+    expect(lexicalOrderHeap.peek()).toBe('AAA');
+    expect(lexicalOrderHeap.poll()).toBe('AAA');
+    expect(lexicalOrderHeap.peek()).toBe('BBB');
+
+    expect(lexicalOrderHeap.peek()).toBe('BBB');
+    expect(lexicalOrderHeap.poll()).toBe('BBB');
+    expect(lexicalOrderHeap.peek()).toBe('CCC');
+    expect(lexicalOrderHeap.poll()).toBe('CCC');
+
+    expect(() => {
+      lexicalOrderHeap.poll();
+    }).toThrowError('No more items in heap');
   });
 });

@@ -10,7 +10,7 @@ import powerSet from '../31-40/Problem37';
 import totalNQueens from '../31-40/Problem38';
 import singleNumber from '../31-40/Problem40';
 
-describe('Problem 31 - 40', () => {
+describe('Problems 31 - 40', () => {
   test('Problem 31 Edit Distance', () => {
     expect(editDistance('kitten', 'sitting')).toBe(3);
     expect(editDistance('', '')).toBe(0);

@@ -9,6 +9,9 @@
 // Do this in O(N) time and O(1) space.
 //
 // https://leetcode.com/problems/single-number-ii/description/
+//
+// O(N) Time complexity
+// O(1) Space complexity
 
 function singleNumber(nums) {
   let x1 = 0;
