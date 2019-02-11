@@ -1,4 +1,5 @@
 import constructItinerary from '../41-50/Problem41';
+import MaxStack from '../41-50/Problem43';
 
 describe('Problems 41 - 50', () => {
   test('Problem 41', () => {
@@ -36,5 +37,20 @@ describe('Problems 41 - 50', () => {
         'JFK'
       )
     ).toEqual(['JFK', 'ATL', 'JFK', 'SFO', 'ATL', 'SFO']);
+  });
+
+  test('Problem 43 Max Stack', () => {
+    const maxStack = new MaxStack();
+    maxStack.push(-2);
+    maxStack.push(0);
+    maxStack.push(-3);
+    expect(maxStack.max()).toBe(0);
+    expect(maxStack.pop()).toBe(-3);
+    expect(maxStack.max()).toBe(0);
+    expect(maxStack.pop()).toBe(0);
+    expect(maxStack.max()).toBe(-2);
+    expect(maxStack.pop()).toBe(-2);
+    expect(maxStack.max()).toBeNull();
+    expect(maxStack.pop()).toBeNull();
   });
 });
