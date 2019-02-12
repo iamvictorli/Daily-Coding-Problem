@@ -1,5 +1,6 @@
 import constructItinerary from '../41-50/Problem41';
 import MaxStack from '../41-50/Problem43';
+import countInversions from '../41-50/Problem44';
 
 describe('Problems 41 - 50', () => {
   test('Problem 41', () => {
@@ -52,5 +53,11 @@ describe('Problems 41 - 50', () => {
     expect(maxStack.pop()).toBe(-2);
     expect(maxStack.max()).toBeNull();
     expect(maxStack.pop()).toBeNull();
+  });
+
+  test('Problem 44 Count Inversions', () => {
+    expect(countInversions([1, 2, 3, 4, 5])).toBe(0);
+    expect(countInversions([2, 4, 1, 3, 5])).toBe(3);
+    expect(countInversions([5, 4, 3, 2, 1])).toBe(10);
   });
 });
