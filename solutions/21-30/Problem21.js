@@ -14,7 +14,7 @@
 /**
  * Returns the minimum number of rooms required based on the intervals of time
  * Intervals are presented in 2d array. Example: [[30, 75], [0, 50], [60, 150]]
- * @param {[number[]]} intervals
+ * @param {number[][]} intervals
  * @return {number}
  */
 function minRooms(intervals) {

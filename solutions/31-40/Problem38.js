@@ -26,6 +26,15 @@ function totalNQueens(n) {
   return helper(0, n, col, tlbr, trbl);
 }
 
+/**
+ * Recursive helper function
+ * @param {number} row
+ * @param {number} n
+ * @param {number} col
+ * @param {boolean[]} tlbr
+ * @param {boolean[]} trbl
+ * @return {number}
+ */
 function helper(row, n, col, tlbr, trbl) {
   let result = 0;
   for (let i = 0; i < n; i++) {

@@ -13,6 +13,11 @@
 // O(N) Time complexity
 // O(1) Space complexity
 
+/**
+ * Returns the non-duplicated integer in a number array where every other number occurs three times
+ * @param {number[]} nums
+ * @return {number}
+ */
 function singleNumber(nums) {
   let x1 = 0;
   let x2 = 0;

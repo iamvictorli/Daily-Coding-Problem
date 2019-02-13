@@ -18,6 +18,12 @@
 // O(MN) Time and Space complexity
 // M is the length of the pattern and N is length of the text
 
+/**
+ * Returns whether the text matches the pattern
+ * @param {string} pattern
+ * @param {string} text
+ * @return {boolean}
+ */
 function matchesRegularExpression(pattern, text) {
   const dp = [...Array(text.length + 1)].map(() =>
     Array(pattern.length + 1).fill(false)

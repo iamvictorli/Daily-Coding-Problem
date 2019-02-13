@@ -17,7 +17,7 @@
 /**
  * Returns the power set of an array
  * @param {number[]} nums
- * @return {[number[]]}
+ * @return {number[][]}
  */
 function powerSet(nums) {
   const list = [];
@@ -29,7 +29,7 @@ function powerSet(nums) {
 /**
  * Backtracking recursive function helper
  * @param {number[]} nums
- * @param {[number[]]} list
+ * @param {number[][]} list
  * @param {number[]} listSoFar
  * @param {number} position
  */
