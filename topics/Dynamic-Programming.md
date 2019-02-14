@@ -131,3 +131,15 @@ For example, given S = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1] sin
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/41-50/Problem42.js)
 
 ---
+
+## Problem 46
+
+This problem was asked by Amazon.
+
+Given a string, find the longest palindromic contiguous substring. If there are more than one with the maximum length, return any one.
+
+For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The longest palindromic substring of "bananas" is "anana".
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/41-50/Problem46.js)
+
+---

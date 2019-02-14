@@ -195,3 +195,15 @@ As another example, given the string "google", you should return "elgoogle".
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/31-40/Problem34.js)
 
 ---
+
+## Problem 46
+
+This problem was asked by Amazon.
+
+Given a string, find the longest palindromic contiguous substring. If there are more than one with the maximum length, return any one.
+
+For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The longest palindromic substring of "bananas" is "anana".
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/41-50/Problem46.js)
+
+---
