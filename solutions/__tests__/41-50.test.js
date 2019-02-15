@@ -2,6 +2,7 @@ import constructItinerary from '../41-50/Problem41';
 import MaxStack from '../41-50/Problem43';
 import countInversions from '../41-50/Problem44';
 import longestPalindrome from '../41-50/Problem46';
+import maxProfit from '../41-50/Problem47';
 
 describe('Problems 41 - 50', () => {
   test('Problem 41', () => {
@@ -74,5 +75,11 @@ describe('Problems 41 - 50', () => {
     expect(['a', 'b', 'c', 'd']).toEqual(
       expect.arrayContaining([longestPalindrome('abcd')])
     );
+  });
+
+  test('Problem 47 Best Time To Buy and Sell Stock', () => {
+    expect(maxProfit([9, 11, 8, 5, 7, 10])).toBe(5);
+    expect(maxProfit([7, 6, 4, 3, 1])).toBe(0);
+    expect(maxProfit([])).toBe(0);
   });
 });
