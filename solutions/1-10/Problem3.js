@@ -28,17 +28,7 @@
 // O(N) Space Complexity
 // N is the number of nodes in the tree
 
-class TreeNode {
-  /**
-   * Initialize a binary tree node with a value and/or left and right nodes
-   * @param {*} val The value stored in the binary tree node.
-   */
-  constructor(val, left = null, right = null) {
-    this.val = val;
-    this.left = left;
-    this.right = right;
-  }
-}
+import TreeNode from '../Data-Structures/TreeNode';
 
 // Serialize using level order traversal
 

@@ -1,8 +1,11 @@
+import TreeNode from '../Data-Structures/TreeNode';
+
 import constructItinerary from '../41-50/Problem41';
 import MaxStack from '../41-50/Problem43';
 import countInversions from '../41-50/Problem44';
 import longestPalindrome from '../41-50/Problem46';
 import maxProfit from '../41-50/Problem47';
+import constructTree from '../41-50/Problem48';
 
 describe('Problems 41 - 50', () => {
   test('Problem 41', () => {
@@ -81,5 +84,30 @@ describe('Problems 41 - 50', () => {
     expect(maxProfit([9, 11, 8, 5, 7, 10])).toBe(5);
     expect(maxProfit([7, 6, 4, 3, 1])).toBe(0);
     expect(maxProfit([])).toBe(0);
+  });
+
+  test('Problem 48 Construct Binary Tree from Preorder and Inorder Traversal', () => {
+    const tree = new TreeNode('a');
+    tree.left = new TreeNode('b');
+    tree.right = new TreeNode('c');
+    tree.left.left = new TreeNode('d');
+    tree.left.right = new TreeNode('e');
+    tree.right.left = new TreeNode('f');
+    tree.right.right = new TreeNode('g');
+    expect(
+      constructTree(
+        ['a', 'b', 'd', 'e', 'c', 'f', 'g'],
+        ['d', 'b', 'e', 'a', 'f', 'c', 'g']
+      )
+    ).toEqual(tree);
+
+    const tree1 = new TreeNode('a');
+    tree1.left = new TreeNode('b');
+    tree1.right = new TreeNode('c');
+    tree1.right.left = new TreeNode('d');
+    tree1.right.right = new TreeNode('e');
+    expect(
+      constructTree(['a', 'b', 'c', 'd', 'e'], ['b', 'a', 'd', 'c', 'e'])
+    ).toEqual(tree1);
   });
 });

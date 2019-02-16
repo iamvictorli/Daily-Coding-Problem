@@ -83,3 +83,31 @@ Given the root to a binary search tree, find the second largest node in the tree
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/31-40/Problem36.js)
 
 ---
+
+## Problem 48
+
+This problem was asked by Google.
+
+Given pre-order and in-order traversals of a binary tree, write a function to reconstruct the tree.
+
+For example, given the following preorder traversal:
+
+[a, b, d, e, c, f, g]
+
+And the following inorder traversal:
+
+[d, b, e, a, f, c, g]
+
+You should return the following tree:
+
+```
+    a
+   / \
+  b   c
+ / \ / \
+d  e f  g
+```
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/41-50/Problem48.js)
+
+---
