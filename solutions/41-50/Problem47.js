@@ -13,6 +13,7 @@
 //
 // O(N) Time complexity
 // O(1) Space complexity
+// N is the number of elements in the array
 
 function maxProfit(prices) {
   if (prices.length === 0) return 0;

@@ -7,6 +7,7 @@ import countInversions from '../41-50/Problem44';
 import longestPalindrome from '../41-50/Problem46';
 import maxProfit from '../41-50/Problem47';
 import constructTree from '../41-50/Problem48';
+import maxSumSubarray from '../41-50/Problem49';
 
 describe('Problems 41 - 50', () => {
   test('Problem 41 Reconstruct Itinerary', () => {
@@ -135,5 +136,11 @@ describe('Problems 41 - 50', () => {
     expect(
       constructTree(['a', 'b', 'c', 'd', 'e'], ['b', 'a', 'd', 'c', 'e'])
     ).toEqual(tree1);
+  });
+
+  test('Problem 49 Maximum Sum Subarray', () => {
+    expect(maxSumSubarray([34, -50, 42, 14, -5, 86])).toBe(137);
+    expect(maxSumSubarray([-5, -1, -8, -9])).toBe(0);
+    expect(maxSumSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4])).toBe(6);
   });
 });
