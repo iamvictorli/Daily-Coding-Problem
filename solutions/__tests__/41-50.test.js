@@ -1,6 +1,7 @@
 import TreeNode from '../Data-Structures/TreeNode';
 
 import constructItinerary from '../41-50/Problem41';
+import subsetSum from '../41-50/Problem42';
 import MaxStack from '../41-50/Problem43';
 import countInversions from '../41-50/Problem44';
 import longestPalindrome from '../41-50/Problem46';
@@ -8,7 +9,7 @@ import maxProfit from '../41-50/Problem47';
 import constructTree from '../41-50/Problem48';
 
 describe('Problems 41 - 50', () => {
-  test('Problem 41', () => {
+  test('Problem 41 Reconstruct Itinerary', () => {
     expect(
       constructItinerary(
         [['SFO', 'HKO'], ['YYZ', 'SFO'], ['YUL', 'YYZ'], ['HKO', 'ORD']],
@@ -43,6 +44,31 @@ describe('Problems 41 - 50', () => {
         'JFK'
       )
     ).toEqual(['JFK', 'ATL', 'JFK', 'SFO', 'ATL', 'SFO']);
+  });
+
+  test('Problem 42 Subset Sum', () => {
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 24)).toEqual([12, 1, 9, 2]);
+
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 15)).toEqual([1, 5, 9]);
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 16)).toEqual([5, 9, 2]);
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 17)).toEqual([12, 5]);
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 18)).toEqual([12, 1, 5]);
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 19)).toEqual([12, 5, 2]);
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 20)).toEqual([12, 1, 5, 2]);
+
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 21)).toEqual([12, 9]);
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 22)).toEqual([12, 1, 9]);
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 23)).toEqual([12, 9, 2]);
+
+    expect(subsetSum([12, 1, 61, 5, 9, 2], 25)).toBeNull();
+
+    expect(subsetSum([2, 3, 7, 8, 10], 9)).toEqual([2, 7]);
+    expect(subsetSum([2, 3, 7, 8, 10], 10)).toEqual([10]);
+    expect(subsetSum([2, 3, 7, 8, 10], 11)).toEqual([3, 8]);
+
+    expect(subsetSum([2, 3, 7, 8, 10], 30)).toEqual([2, 3, 7, 8, 10]);
+
+    expect(subsetSum([2, 3, 7, 8, 10], 14)).toBeNull();
   });
 
   test('Problem 43 Max Stack', () => {

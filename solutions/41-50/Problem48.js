@@ -21,6 +21,10 @@
 // d  e f  g
 //
 // https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/
+//
+// O(N log N) Time complexity
+// O(N) Space complexity
+// N is the number of elements in the traversal
 
 import TreeNode from '../Data-Structures/TreeNode';
 
