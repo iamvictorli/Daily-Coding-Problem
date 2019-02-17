@@ -8,6 +8,7 @@ import longestPalindrome from '../41-50/Problem46';
 import maxProfit from '../41-50/Problem47';
 import constructTree from '../41-50/Problem48';
 import maxSumSubarray from '../41-50/Problem49';
+import evalExpressionTree from '../41-50/Problem50';
 
 describe('Problems 41 - 50', () => {
   test('Problem 41 Reconstruct Itinerary', () => {
@@ -142,5 +143,38 @@ describe('Problems 41 - 50', () => {
     expect(maxSumSubarray([34, -50, 42, 14, -5, 86])).toBe(137);
     expect(maxSumSubarray([-5, -1, -8, -9])).toBe(0);
     expect(maxSumSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4])).toBe(6);
+  });
+
+  test('Problem 50 Evaluate Expression Tree', () => {
+    let tree = new TreeNode('*');
+    tree.left = new TreeNode('+');
+    tree.right = new TreeNode('+');
+    tree.left.left = new TreeNode(3);
+    tree.left.right = new TreeNode(2);
+    tree.right.left = new TreeNode(4);
+    tree.right.right = new TreeNode(5);
+
+    expect(evalExpressionTree(tree)).toBe(45);
+
+    tree = new TreeNode('+');
+    tree.left = new TreeNode(3);
+    tree.right = new TreeNode('*');
+    tree.right.left = new TreeNode('+');
+    tree.right.right = new TreeNode(2);
+    tree.right.left.left = new TreeNode(5);
+    tree.right.left.right = new TreeNode(9);
+    expect(evalExpressionTree(tree)).toBe(31);
+
+    tree = new TreeNode(10);
+    expect(evalExpressionTree(tree)).toBe(10);
+
+    tree = new TreeNode('+');
+    tree.left = new TreeNode('*');
+    tree.right = new TreeNode(4);
+    tree.left.left = new TreeNode('+');
+    tree.left.right = new TreeNode(3);
+    tree.left.left.left = new TreeNode(2);
+    tree.left.left.right = new TreeNode(1);
+    expect(evalExpressionTree(tree)).toBe(13);
   });
 });
