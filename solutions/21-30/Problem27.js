@@ -11,6 +11,7 @@
 // https://leetcode.com/problems/valid-parentheses/description/
 //
 // O(N) Time and Space Complexity
+// N is the length of the string
 
 function validBrackets(string) {
   const stack = [];

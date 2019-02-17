@@ -15,6 +15,7 @@
 //
 // O(N) Time Complexity
 // O(1) Space Complexity
+// N is the number of heights
 
 /**
  * Returns the units of water remain trapped on the map

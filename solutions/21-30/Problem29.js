@@ -8,6 +8,13 @@
 //
 // Implement run-length encoding and decoding.
 // You can assume the string to be encoded have no digits and consists solely of alphabetic characters. You can assume the string to be decoded is valid.
+//
+// String decoding and encoding
+// O(N) Time complexity
+// O(1) Space complexity
+// N is the length of the string
+
+import isNumber from 'is-number';
 
 /**
  * Returns the encoding of string
@@ -74,15 +81,6 @@ function addCountAmount(string, char, count) {
   }
 
   return string;
-}
-
-/**
- * Returns true if the character is a number
- * @param {string} char
- * @return {boolean}
- */
-function isNumber(char) {
-  return !Number.isNaN(Number(char));
 }
 
 export { stringEncoding, stringDecoding };

@@ -1,4 +1,5 @@
 /* eslint no-unused-vars: ["error", { "varsIgnorePattern": "^buildPalindromeByFewestInsertions" }] */
+
 // Problem 34
 //
 // This problem was asked by Quora.
@@ -10,6 +11,10 @@
 // There are seven other palindromes that can be made from "race" by adding three letters, but "ecarace" comes first alphabetically.
 //
 // As another example, given the string "google", you should return "elgoogle".
+//
+// O(N^2) Time complexity
+// O(N) Space complexity
+// N is the length of the string
 
 /**
  * Finds the palindrome that can be made by inserting the fewest number of characters as possible anywhere in the word.

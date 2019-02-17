@@ -19,6 +19,9 @@
 // https://leetcode.com/problems/find-median-from-data-stream/description/
 // https://www.youtube.com/watch?v=VmogG01IjYc
 //
+// O(N) Time complexity
+// O(N) Space complexity
+// N is the number of elements being processed
 
 import Heap from '../Data-Structures/Heap';
 

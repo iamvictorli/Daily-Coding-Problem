@@ -23,8 +23,8 @@
 // https://leetcode.com/problems/climbing-stairs/description/
 //
 // First Problem: O(N) Time complexity, O(1) Space complexity
-// Second Problem: O(NX) Time complexity, O(N) Space complexity
-// N is the number of stairs and X is the number of elements in the set
+// Second Problem: O(NM) Time complexity, O(N) Space complexity
+// N is the number of stairs and M is the number of elements in the set
 
 /**
  * Returns the number of unique ways to climb the staircase 1 or 2 steps at a time

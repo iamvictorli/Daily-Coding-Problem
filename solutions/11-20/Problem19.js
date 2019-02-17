@@ -13,6 +13,7 @@
 //
 // O(NK) Time complexity
 // O(1) Space complexity
+// N is the number of rows and K is the number of columns
 
 /**
  * Returns the minimum cost of building N houses with K different colors, with no two neighboring houses being the same color.
