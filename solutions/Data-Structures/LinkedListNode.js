@@ -1,7 +1,7 @@
 class LinkedListNode {
   /**
-   * Initializes the start of a link list
-   * @param {*} val The value stored in linked list
+   * Initializes the start of a linked list
+   * @param {*} val The value stored in node
    */
   constructor(val) {
     this.val = val;
