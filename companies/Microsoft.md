@@ -69,3 +69,18 @@ You should return 45, as it is (3 + 2) * (4 + 5).
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/41-50/Problem50.js)
 
 ---
+
+## Problem 55
+
+This problem was asked by Microsoft.
+
+Implement a URL shortener with the following methods:
+
+- shorten(url), which shortens the url into a six-character alphanumeric string, such as zLg6wl.
+- restore(short), which expands the shortened string into the original url. If no such shortened string exists, return null.
+
+Hint: What if we enter the same URL twice?
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/51-60/Problem55.js)
+
+---

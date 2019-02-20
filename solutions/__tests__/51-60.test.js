@@ -1,6 +1,7 @@
 import LRUCache from '../51-60/Problem52';
 import Queue from '../51-60/Problem53';
 import sudokuSolve from '../51-60/Problem54';
+import URLShortener from '../51-60/Problem55';
 
 describe('Problems 51 - 60', () => {
   test('Problem 52 LRU Cache', () => {
@@ -33,7 +34,7 @@ describe('Problems 51 - 60', () => {
     }).toThrow();
   });
 
-  test.skip('Problem 54 Sudoku Solver', () => {
+  test('Problem 54 Sudoku Solver', () => {
     const board = [
       ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
       ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
@@ -59,5 +60,12 @@ describe('Problems 51 - 60', () => {
       ['2', '8', '7', '4', '1', '9', '6', '3', '5'],
       ['3', '4', '5', '2', '8', '6', '1', '7', '9']
     ]);
+  });
+
+  test('Problem 55 URL Shortener', () => {
+    const urlShortener = new URLShortener();
+    expect(urlShortener.restore(urlShortener.shorten('www.google.com'))).toBe(
+      'www.google.com'
+    );
   });
 });
