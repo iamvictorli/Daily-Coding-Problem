@@ -2,6 +2,7 @@ import LRUCache from '../51-60/Problem52';
 import Queue from '../51-60/Problem53';
 import sudokuSolve from '../51-60/Problem54';
 import URLShortener from '../51-60/Problem55';
+import kColors from '../51-60/Problem56';
 
 describe('Problems 51 - 60', () => {
   test('Problem 52 LRU Cache', () => {
@@ -67,5 +68,39 @@ describe('Problems 51 - 60', () => {
     expect(urlShortener.restore(urlShortener.shorten('www.google.com'))).toBe(
       'www.google.com'
     );
+  });
+
+  test('Problem 56 M Coloring', () => {
+    const graph = [
+      [0, 1, 1, 1, 1],
+      [1, 0, 1, 1, 1],
+      [1, 1, 0, 1, 1],
+      [1, 1, 1, 0, 1],
+      [1, 1, 1, 1, 0]
+    ];
+
+    expect(kColors(graph, 5)).toBe(true);
+    expect(kColors(graph, 4)).toBe(false);
+    expect(kColors(graph, 3)).toBe(false);
+
+    // https://github.com/Li-Victor/daily-coding-problem/blob/master/assets/Graph-Coloring.png
+    // top down left to right
+
+    const graph1 = [
+      [0, 1, 1, 0, 0, 1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+      [1, 0, 0, 1, 0, 0, 0, 0, 1, 0],
+      [0, 0, 1, 0, 1, 0, 0, 1, 0, 0],
+      [0, 0, 0, 1, 0, 1, 1, 0, 0, 0],
+      [1, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+      [0, 1, 0, 0, 1, 0, 0, 0, 1, 0],
+      [0, 1, 0, 1, 0, 0, 0, 0, 0, 1],
+      [0, 0, 1, 0, 0, 0, 1, 0, 0, 1],
+      [0, 0, 0, 0, 0, 1, 0, 1, 1, 0]
+    ];
+
+    expect(kColors(graph1, 4)).toBe(true);
+    expect(kColors(graph1, 3)).toBe(true);
+    expect(kColors(graph1, 2)).toBe(false);
   });
 });
