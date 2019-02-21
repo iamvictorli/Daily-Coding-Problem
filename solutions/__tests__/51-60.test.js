@@ -3,6 +3,7 @@ import Queue from '../51-60/Problem53';
 import sudokuSolve from '../51-60/Problem54';
 import URLShortener from '../51-60/Problem55';
 import kColors from '../51-60/Problem56';
+import wordWrap from '../51-60/Problem57';
 
 describe('Problems 51 - 60', () => {
   test('Problem 52 LRU Cache', () => {
@@ -102,5 +103,27 @@ describe('Problems 51 - 60', () => {
     expect(kColors(graph1, 4)).toBe(true);
     expect(kColors(graph1, 3)).toBe(true);
     expect(kColors(graph1, 2)).toBe(false);
+  });
+
+  test('Problem 57 Word Wrap', () => {
+    expect(wordWrap('the quick brown fox jumps over the lazy dog', 10)).toEqual(
+      ['the quick', 'brown fox', 'jumps over', 'the lazy', 'dog']
+    );
+
+    expect(wordWrap('the quick brown fox jumps over the lazy dog', 5)).toEqual([
+      'the',
+      'quick',
+      'brown',
+      'fox',
+      'jumps',
+      'over',
+      'the',
+      'lazy',
+      'dog'
+    ]);
+
+    expect(
+      wordWrap('the quick brown fox jumps over the lazy dog', 4)
+    ).toBeNull();
   });
 });
