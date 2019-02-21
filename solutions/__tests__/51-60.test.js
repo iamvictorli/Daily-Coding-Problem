@@ -4,6 +4,7 @@ import sudokuSolve from '../51-60/Problem54';
 import URLShortener from '../51-60/Problem55';
 import kColors from '../51-60/Problem56';
 import wordWrap from '../51-60/Problem57';
+import searchRotatedArray from '../51-60/Problem58';
 
 describe('Problems 51 - 60', () => {
   test('Problem 52 LRU Cache', () => {
@@ -125,5 +126,11 @@ describe('Problems 51 - 60', () => {
     expect(
       wordWrap('the quick brown fox jumps over the lazy dog', 4)
     ).toBeNull();
+  });
+
+  test('Problem 58 Search in a Rotated Sorted Array', () => {
+    expect(searchRotatedArray([13, 18, 25, 2, 8, 10], 8)).toBe(4);
+    expect(searchRotatedArray([4, 5, 6, 7, 0, 1, 2], 0)).toBe(4);
+    expect(searchRotatedArray([4, 5, 6, 7, 0, 1, 2], 3)).toBeNull();
   });
 });
