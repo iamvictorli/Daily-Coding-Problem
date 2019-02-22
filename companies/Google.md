@@ -365,3 +365,13 @@ Given an undirected graph represented as an adjacency matrix and an integer k, w
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/51-60/Problem56.js)
 
 ---
+
+## Problem 59
+
+This problem was asked by Google.
+
+Implement a file syncing algorithm for two computers over a low-bandwidth network. What if we know the files in the two computers are mostly the same?
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/51-60/Problem59.js)
+
+---
