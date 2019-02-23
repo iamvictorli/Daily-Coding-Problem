@@ -5,6 +5,7 @@ import URLShortener from '../51-60/Problem55';
 import kColors from '../51-60/Problem56';
 import wordWrap from '../51-60/Problem57';
 import searchRotatedArray from '../51-60/Problem58';
+import canPartition from '../51-60/Problem60';
 
 describe('Problems 51 - 60', () => {
   test('Problem 52 LRU Cache', () => {
@@ -132,5 +133,12 @@ describe('Problems 51 - 60', () => {
     expect(searchRotatedArray([13, 18, 25, 2, 8, 10], 8)).toBe(4);
     expect(searchRotatedArray([4, 5, 6, 7, 0, 1, 2], 0)).toBe(4);
     expect(searchRotatedArray([4, 5, 6, 7, 0, 1, 2], 3)).toBeNull();
+  });
+
+  test('Problem 60 Partition Equal Subset Sum', () => {
+    expect(canPartition([15, 5, 20, 10, 35, 15, 10])).toBe(true);
+    expect(canPartition([5, 5, 20, 10, 35])).toBe(false);
+    expect(canPartition([1, 5, 11, 5])).toBe(true);
+    expect(canPartition([1, 2, 3, 5])).toBe(false);
   });
 });

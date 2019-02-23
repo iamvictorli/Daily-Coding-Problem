@@ -16,7 +16,7 @@
 // Similar to the Coin Change Problem: https://leetcode.com/problems/coin-change/description/
 
 /**
- * Returns a setset that adds up to the target. If such a subset cannot be made, then return null
+ * Returns a subset that adds up to the target. If such a subset cannot be made, then return null
  * Result is in relative order, if multiple subsets are possible, returns first subset or if there is a number that is equal to target
  * @param {number[]} nums
  * @param {number} target
@@ -35,17 +35,18 @@ function subsetSum(nums, target) {
   if (nums[0] <= target) dp[0][nums[0]] = true;
   if (nums[0] === target) return [nums[0]];
 
+  // iterate through nums, starting at the first index
   for (let i = 1; i < nums.length; i++) {
     const num = nums[i];
     if (num === target) return [num];
     // iterate through all the subsets of 1...target
     for (let j = 1; j <= target; j++) {
-      // dp[i - 1][j] is the previous subset problem, when current num was not included
-      // dp[i - 1][j - num] is the previous subset problem to j - num
+      // dp[i - 1][j] is the previous subset problem, when current num was not included. Not selecting nums[i]
+      // dp[i - 1][j - num] is the previous subset problem to j - num. Selecting this nums[i].
+
+      dp[i][j] = dp[i - 1][j]; // First, Choose to not select this nums[i]
       if (j - num >= 0) {
-        dp[i][j] = dp[i - 1][j - num] || dp[i - 1][j];
-      } else {
-        dp[i][j] = dp[i - 1][j];
+        dp[i][j] = dp[i][j] || dp[i - 1][j - num]; // See if we should select nums[i]
       }
     }
   }
