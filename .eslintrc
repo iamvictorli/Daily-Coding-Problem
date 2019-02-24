@@ -4,7 +4,7 @@
     "jest": true,
     "es6": true
   },
-  "plugins": ["prettier"],
+  "plugins": ["import", "prettier"],
   "rules": {
     "no-plusplus": "off",
     "no-param-reassign": "off",
