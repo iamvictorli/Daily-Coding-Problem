@@ -1,6 +1,7 @@
 import pow from '../61-70/Problem61';
 import uniquePaths from '../61-70/Problem62';
 import wordSearch from '../61-70/Problem63';
+import spiralOrder from '../61-70/Problem65';
 
 describe('Problems 61 - 70', () => {
   test('Problem 61 Pow(x, y)', () => {
@@ -34,5 +35,64 @@ describe('Problems 61 - 70', () => {
     expect(wordSearch(board, 'AS')).toBe(true);
     expect(wordSearch(board, 'AM')).toBe(true);
     expect(wordSearch(board, 'MACE')).toBe(false);
+  });
+
+  test('Problem 65 Spiral Order', () => {
+    expect(
+      spiralOrder([
+        [1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10],
+        [11, 12, 13, 14, 15],
+        [16, 17, 18, 19, 20]
+      ])
+    ).toEqual([
+      1,
+      2,
+      3,
+      4,
+      5,
+      10,
+      15,
+      20,
+      19,
+      18,
+      17,
+      16,
+      11,
+      6,
+      7,
+      8,
+      9,
+      14,
+      13,
+      12
+    ]);
+
+    expect(spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]])).toEqual([
+      1,
+      2,
+      3,
+      6,
+      9,
+      8,
+      7,
+      4,
+      5
+    ]);
+
+    expect(spiralOrder([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])).toEqual([
+      1,
+      2,
+      3,
+      4,
+      8,
+      12,
+      11,
+      10,
+      9,
+      5,
+      6,
+      7
+    ]);
   });
 });
