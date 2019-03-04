@@ -2,6 +2,7 @@ import pow from '../61-70/Problem61';
 import uniquePaths from '../61-70/Problem62';
 import wordSearch from '../61-70/Problem63';
 import spiralOrder from '../61-70/Problem65';
+import LFUCache from '../61-70/Problem67';
 
 describe('Problems 61 - 70', () => {
   test('Problem 61 Pow(x, y)', () => {
@@ -94,5 +95,21 @@ describe('Problems 61 - 70', () => {
       6,
       7
     ]);
+  });
+
+  test.skip('Problem 67 LFU Cache', () => {
+    const cache = new LFUCache(2);
+    cache.put(1, 1);
+    cache.put(2, 2);
+    expect(cache.get(1)).toBe(1);
+
+    cache.put(3, 3);
+    expect(cache.get(2)).toBe(-1);
+    expect(cache.get(3)).toBe(3);
+
+    cache.put(4, 4);
+    expect(cache.get(1)).toBe(-1);
+    expect(cache.get(3)).toBe(3);
+    expect(cache.get(4)).toBe(4);
   });
 });
