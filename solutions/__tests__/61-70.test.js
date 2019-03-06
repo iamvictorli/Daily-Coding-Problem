@@ -4,6 +4,7 @@ import wordSearch from '../61-70/Problem63';
 import spiralOrder from '../61-70/Problem65';
 import LFUCache from '../61-70/Problem67';
 import maximumProduct from '../61-70/Problem69';
+import nthPerfectNumber from '../61-70/Problem70';
 
 describe('Problems 61 - 70', () => {
   test('Problem 61 Pow(x, y)', () => {
@@ -118,5 +119,11 @@ describe('Problems 61 - 70', () => {
     expect(maximumProduct([-10, -10, 5, 2])).toBe(500);
     expect(maximumProduct([1, 2, 3])).toBe(6);
     expect(maximumProduct([1, 2, 3, 4])).toBe(24);
+  });
+
+  test('Problem 70 Nth Perfect Number', () => {
+    expect(nthPerfectNumber(1)).toBe(19);
+    expect(nthPerfectNumber(2)).toBe(28);
+    expect(nthPerfectNumber(15)).toBe(154);
   });
 });

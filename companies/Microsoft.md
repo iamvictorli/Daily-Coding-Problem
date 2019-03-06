@@ -105,3 +105,17 @@ and the target word 'FOAM', you should return true, since it's the leftmost colu
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/61-70/Problem63.js)
 
 ---
+
+## Problem 70
+
+This problem was asked by Microsoft.
+
+A number is considered perfect if its digits sum up to exactly 10.
+
+Given a positive integer n, return the n-th perfect number.
+
+For example, given 1, you should return 19. Given 2, you should return 28.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/61-70/Problem70.js)
+
+---
