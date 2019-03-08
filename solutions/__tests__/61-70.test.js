@@ -1,6 +1,7 @@
 import pow from '../61-70/Problem61';
 import uniquePaths from '../61-70/Problem62';
 import wordSearch from '../61-70/Problem63';
+import knightsTour from '../61-70/Problem64';
 import spiralOrder from '../61-70/Problem65';
 import LFUCache from '../61-70/Problem67';
 import maximumProduct from '../61-70/Problem69';
@@ -38,6 +39,15 @@ describe('Problems 61 - 70', () => {
     expect(wordSearch(board, 'AS')).toBe(true);
     expect(wordSearch(board, 'AM')).toBe(true);
     expect(wordSearch(board, 'MACE')).toBe(false);
+  });
+
+  test('Problem 64 Knights Tour', () => {
+    // https://en.wikipedia.org/wiki/Knight%27s_tour#Number_of_tours
+    expect(knightsTour(1)).toBe(1);
+    expect(knightsTour(2)).toBe(0);
+    expect(knightsTour(3)).toBe(0);
+    expect(knightsTour(4)).toBe(0);
+    expect(knightsTour(5)).toBe(1728);
   });
 
   test('Problem 65 Spiral Order', () => {
