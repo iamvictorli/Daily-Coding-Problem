@@ -8,7 +8,7 @@
 //
 // Bonus: Can you do this in one pass?
 //
-// https://leetcode.com/problems/two-sum/description/
+// https://leetcode.com/problems/two-sum/
 // https://www.youtube.com/watch?v=XKu_SEDAykw
 //
 // O(N) Time complexity

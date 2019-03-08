@@ -10,14 +10,14 @@
 //
 // You can modify the input array in-place.
 //
-// https://leetcode.com/problems/first-missing-positive/description/
+// https://leetcode.com/problems/first-missing-positive/
 //
 // O(N) Time complexity
 // O(1) Space complexity
 // N is the number of elements in the array
 
 // Overview:
-// 1. Partition the positive numbers on left side and 0s/negative to left side
+// 1. Partition the positive numbers on left side and 0s/negative to right side
 // 2. Mark positive elements indices as negative if valid
 // 3. Find first positive index that element is positive
 //
@@ -50,6 +50,7 @@
  */
 function firstMissingPositiveInteger(nums) {
   if (nums.length === 0) return 1;
+  // Using pivot value of 0
   const k = partition(nums, 0, nums.length - 1, 0) + 1;
 
   let result = k;

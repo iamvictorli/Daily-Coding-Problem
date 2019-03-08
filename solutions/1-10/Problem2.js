@@ -11,12 +11,12 @@
 //
 // Follow-up: what if you can't use division?
 //
-// https://leetcode.com/problems/product-of-array-except-self/description/
+// https://leetcode.com/problems/product-of-array-except-self/
 //
 // O(N) Time Complexity
 // O(N) Space Complexity, O(1) if not including output array
 // N is the number of elements in the array
-
+//
 // With division, multiply every number to have a final product and then for each number divide from the final product
 
 /**

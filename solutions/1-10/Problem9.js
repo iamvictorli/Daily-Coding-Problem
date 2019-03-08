@@ -44,6 +44,7 @@ function sumNonAdjacentDP(nums) {
   dp[1] = Math.max(dp[0], nums[1]);
   for (let i = 2; i < nums.length; i++) {
     const sum = nums[i] + dp[i - 2];
+    // Pick the the previous sum or choose the sum
     dp[i] = Math.max(dp[i - 1], sum);
   }
   return dp[dp.length - 1];

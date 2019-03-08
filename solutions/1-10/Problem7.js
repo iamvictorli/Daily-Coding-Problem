@@ -11,7 +11,7 @@
 //
 // You can assume that the messages are decodable. For example, '001' is not allowed.
 //
-// https://leetcode.com/problems/decode-ways/description/
+// https://leetcode.com/problems/decode-ways/
 //
 // O(N) Time complexity
 // O(1) Space complexity
@@ -76,16 +76,16 @@ function numDecodingsRMemo(message) {
  * Top Down Recursive Helper function with Memoization O(N) Time and Space Complexity
  * @param {string} message
  * @param {number} index
- * @param {Map} map
+ * @param {Map<number, number>} memo
  * @return {number}
  */
-function numDecodingsRMemoHelper(message, index, map) {
+function numDecodingsRMemoHelper(message, index, memo) {
   if (index === message.length) return 1;
-  if (map.has(index)) return map.get(index);
+  if (memo.has(index)) return memo.get(index);
   if (message.charAt(index) === '0') return 0;
 
   // Single Number
-  let totalDecodings = numDecodingsRMemoHelper(message, index + 1, map);
+  let totalDecodings = numDecodingsRMemoHelper(message, index + 1, memo);
   if (index < message.length - 1) {
     // Double Number
     const doubleNum = parseInt(message.substring(index, index + 2), 10);
@@ -94,7 +94,7 @@ function numDecodingsRMemoHelper(message, index, map) {
       totalDecodings += numDecodingsRHelper(message, index + 2);
   }
 
-  map.set(index, totalDecodings);
+  memo.set(index, totalDecodings);
   return totalDecodings;
 }
 

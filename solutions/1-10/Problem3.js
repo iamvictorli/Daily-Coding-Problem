@@ -21,7 +21,7 @@
 // );
 // expect(deserialize(serialize(node)).left.left.val).toEqual('left.left'); // Jest Testing
 //
-// https://leetcode.com/problems/serialize-and-deserialize-bst/description/
+// https://leetcode.com/problems/serialize-and-deserialize-bst/
 //
 // Both serialize and deserialize functions:
 // O(N) Time Complexity
