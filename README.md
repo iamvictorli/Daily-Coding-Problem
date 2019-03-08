@@ -1189,3 +1189,13 @@ Should return null, since we have an infinite loop.
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/71-80/Problem72.js)
 
 ---
+
+## Problem 73
+
+This problem was asked by Google.
+
+Given the head of a singly linked list, reverse it in-place.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/71-80/Problem73.js)
+
+---

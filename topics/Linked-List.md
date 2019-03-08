@@ -41,3 +41,13 @@ Do this in constant space and in one pass.
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/21-30/Problem26.js)
 
 ---
+
+## Problem 73
+
+This problem was asked by Google.
+
+Given the head of a singly linked list, reverse it in-place.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/71-80/Problem73.js)
+
+---
