@@ -2,6 +2,7 @@ import LinkedListNode from '../Data-Structures/LinkedListNode';
 
 import largestPathValue from '../71-80/Problem72';
 import reverseLinkedList from '../71-80/Problem73';
+import multiplicationTable from '../71-80/Problem74';
 
 describe('Problems 71 - 80', () => {
   test('Problem 72 Largest Path Value in a Graph', () => {
@@ -53,5 +54,12 @@ describe('Problems 71 - 80', () => {
     reversedHead.next.next.next.next = new LinkedListNode(1);
 
     expect(reverseLinkedList(head)).toEqual(reversedHead);
+  });
+
+  test('Problem 74 Multiplication Table', () => {
+    expect(multiplicationTable(6, 12)).toBe(4);
+    expect(multiplicationTable(3, 9)).toBe(1);
+    expect(multiplicationTable(3, 6)).toBe(2);
+    expect(multiplicationTable(3, 1)).toBe(1);
   });
 });
