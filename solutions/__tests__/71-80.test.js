@@ -3,6 +3,7 @@ import LinkedListNode from '../Data-Structures/LinkedListNode';
 import largestPathValue from '../71-80/Problem72';
 import reverseLinkedList from '../71-80/Problem73';
 import multiplicationTable from '../71-80/Problem74';
+import longestIncreasingSubsequence from '../71-80/Problem75';
 
 describe('Problems 71 - 80', () => {
   test('Problem 72 Largest Path Value in a Graph', () => {
@@ -61,5 +62,30 @@ describe('Problems 71 - 80', () => {
     expect(multiplicationTable(3, 9)).toBe(1);
     expect(multiplicationTable(3, 6)).toBe(2);
     expect(multiplicationTable(3, 1)).toBe(1);
+  });
+
+  test('Problem 75 Longest Increasing Subsequence', () => {
+    expect(
+      longestIncreasingSubsequence([
+        0,
+        8,
+        4,
+        12,
+        2,
+        10,
+        6,
+        14,
+        1,
+        9,
+        5,
+        13,
+        3,
+        11,
+        7,
+        15
+      ])
+    ).toBe(6);
+    expect(longestIncreasingSubsequence([10, 9, 2, 5, 3, 7, 101, 18])).toBe(4);
+    expect(longestIncreasingSubsequence([1, 3, 6, 7, 9, 4, 10, 5, 6])).toBe(6);
   });
 });
