@@ -4,6 +4,7 @@ import largestPathValue from '../71-80/Problem72';
 import reverseLinkedList from '../71-80/Problem73';
 import multiplicationTable from '../71-80/Problem74';
 import longestIncreasingSubsequence from '../71-80/Problem75';
+import colRemoved from '../71-80/Problem76';
 
 describe('Problems 71 - 80', () => {
   test('Problem 72 Largest Path Value in a Graph', () => {
@@ -88,4 +89,18 @@ describe('Problems 71 - 80', () => {
     expect(longestIncreasingSubsequence([10, 9, 2, 5, 3, 7, 101, 18])).toBe(4);
     expect(longestIncreasingSubsequence([1, 3, 6, 7, 9, 4, 10, 5, 6])).toBe(6);
   });
+
+  test('Problem 76 Columns Removed To Make Rows Ordered Lexicographically ', () => {
+    expect(
+      colRemoved([['c', 'b', 'a'], ['d', 'a', 'f'], ['g', 'h', 'i']])
+    ).toBe(1);
+
+    expect(colRemoved([['c', 'a'], ['d', 'f'], ['g', 'i']])).toBe(0);
+
+    expect(colRemoved([['a', 'b', 'c', 'd', 'e', 'f']])).toBe(0);
+  });
+
+  expect(colRemoved([['z', 'y', 'x'], ['w', 'v', 'u'], ['t', 's', 'r']])).toBe(
+    3
+  );
 });
