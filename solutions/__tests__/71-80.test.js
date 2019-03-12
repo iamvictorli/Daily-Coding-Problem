@@ -5,6 +5,7 @@ import reverseLinkedList from '../71-80/Problem73';
 import multiplicationTable from '../71-80/Problem74';
 import longestIncreasingSubsequence from '../71-80/Problem75';
 import colRemoved from '../71-80/Problem76';
+import mergeIntervals from '../71-80/Problem77';
 
 describe('Problems 71 - 80', () => {
   test('Problem 72 Largest Path Value in a Graph', () => {
@@ -103,4 +104,24 @@ describe('Problems 71 - 80', () => {
   expect(colRemoved([['z', 'y', 'x'], ['w', 'v', 'u'], ['t', 's', 'r']])).toBe(
     3
   );
+
+  test('Problem 77 Merge Intervals', () => {
+    expect(mergeIntervals([[1, 3], [5, 8], [4, 10], [20, 25]])).toEqual([
+      [1, 3],
+      [4, 10],
+      [20, 25]
+    ]);
+
+    expect(mergeIntervals([[1, 3], [2, 6], [8, 10], [15, 18]])).toEqual([
+      [1, 6],
+      [8, 10],
+      [15, 18]
+    ]);
+
+    expect(mergeIntervals([[1, 4], [4, 5]])).toEqual([[1, 5]]);
+
+    expect(mergeIntervals([[2, 3], [4, 5], [6, 7], [8, 9], [1, 10]])).toEqual([
+      [1, 10]
+    ]);
+  });
 });
