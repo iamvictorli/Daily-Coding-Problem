@@ -10,6 +10,9 @@
 // For example, given [(1, 3), (5, 8), (4, 10), (20, 25)], you should return [(1, 3), (4, 10), (20, 25)].
 //
 // https://leetcode.com/problems/merge-intervals/
+//
+// O(N Log N) Time complexity
+// O(1) Space complexity
 
 /**
  * Returns a new list of intervals where all overlapping intervals have been merged

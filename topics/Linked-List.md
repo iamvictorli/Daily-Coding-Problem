@@ -51,3 +51,13 @@ Given the head of a singly linked list, reverse it in-place.
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/71-80/Problem73.js)
 
 ---
+
+## Problem 78
+
+This problem was asked by Google.
+
+Given k sorted singly linked lists, write a function to merge all the lists into one sorted singly linked list.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/71-80/Problem78.js)
+
+---

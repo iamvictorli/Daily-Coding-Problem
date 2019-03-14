@@ -6,6 +6,7 @@ import multiplicationTable from '../71-80/Problem74';
 import longestIncreasingSubsequence from '../71-80/Problem75';
 import colRemoved from '../71-80/Problem76';
 import mergeIntervals from '../71-80/Problem77';
+import mergeKLists from '../71-80/Problem78';
 
 describe('Problems 71 - 80', () => {
   test('Problem 72 Largest Path Value in a Graph', () => {
@@ -123,5 +124,29 @@ describe('Problems 71 - 80', () => {
     expect(mergeIntervals([[2, 3], [4, 5], [6, 7], [8, 9], [1, 10]])).toEqual([
       [1, 10]
     ]);
+  });
+
+  test('Problem 78 Merge k Sorted Lists', () => {
+    const list1 = new LinkedListNode(1);
+    list1.next = new LinkedListNode(4);
+    list1.next.next = new LinkedListNode(5);
+
+    const list2 = new LinkedListNode(1);
+    list2.next = new LinkedListNode(3);
+    list2.next.next = new LinkedListNode(4);
+
+    const list3 = new LinkedListNode(2);
+    list3.next = new LinkedListNode(6);
+
+    const expectedResult = new LinkedListNode(1);
+    expectedResult.next = new LinkedListNode(1);
+    expectedResult.next.next = new LinkedListNode(2);
+    expectedResult.next.next.next = new LinkedListNode(3);
+    expectedResult.next.next.next.next = new LinkedListNode(4);
+    expectedResult.next.next.next.next.next = new LinkedListNode(4);
+    expectedResult.next.next.next.next.next.next = new LinkedListNode(5);
+    expectedResult.next.next.next.next.next.next.next = new LinkedListNode(6);
+
+    expect(mergeKLists([list1, list2, list3])).toEqual(expectedResult);
   });
 });
