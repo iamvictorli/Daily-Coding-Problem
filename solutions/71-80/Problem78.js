@@ -14,6 +14,11 @@
 import Heap from '../Data-Structures/Heap';
 import LinkedListNode from '../Data-Structures/LinkedListNode';
 
+/**
+ * Returns a merged linked list of an array of linked list
+ * @param {LinkedListNode<LinkedListNode>} lists
+ * @return {LinkedListNode}
+ */
 function mergeKLists(lists) {
   // Use a min heap
   const minHeap = new Heap((x, y) => {

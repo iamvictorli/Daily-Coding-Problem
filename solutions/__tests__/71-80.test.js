@@ -7,6 +7,7 @@ import longestIncreasingSubsequence from '../71-80/Problem75';
 import colRemoved from '../71-80/Problem76';
 import mergeIntervals from '../71-80/Problem77';
 import mergeKLists from '../71-80/Problem78';
+import nonDecreasing from '../71-80/Problem79';
 
 describe('Problems 71 - 80', () => {
   test('Problem 72 Largest Path Value in a Graph', () => {
@@ -148,5 +149,17 @@ describe('Problems 71 - 80', () => {
     expectedResult.next.next.next.next.next.next.next = new LinkedListNode(6);
 
     expect(mergeKLists([list1, list2, list3])).toEqual(expectedResult);
+  });
+
+  test('Problem 79 Non Decreasing Array', () => {
+    expect(nonDecreasing([10, 5, 7])).toBe(true);
+    expect(nonDecreasing([10, 5, 1])).toBe(false);
+    expect(nonDecreasing([4, 2, 3])).toBe(true);
+    expect(nonDecreasing([4, 2, 1])).toBe(false);
+    expect(nonDecreasing([1, 1, 1])).toBe(true);
+    expect(nonDecreasing([3, 4, 2, 3])).toBe(false);
+    expect(nonDecreasing([2, 3, 3, 2, 4])).toBe(true);
+    expect(nonDecreasing([5, 5, 3, 4])).toBe(false);
+    expect(nonDecreasing([-1, 4, 2, 3])).toBe(true);
   });
 });
