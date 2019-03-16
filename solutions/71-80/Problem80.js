@@ -9,6 +9,10 @@
 //   b   c
 //  /
 // d
+//
+// O(N) Time complexity
+// O(N) Space complexity
+// N is the number of nodes in the tree
 
 /**
  * Returns the deepest node
