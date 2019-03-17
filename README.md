@@ -1344,3 +1344,15 @@ For example if {“2”: [“a”, “b”, “c”], 3: [“d”, “e”, “f
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem81.js)
 
 ---
+
+## Problem 82
+
+This problem was asked Microsoft.
+
+Using a read7() method that returns 7 characters from a file, implement readN(n) which reads n characters.
+
+For example, given a file with the content “Hello world”, three read7() returns “Hello w”, “orld” and then “”.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem82.js)
+
+---
