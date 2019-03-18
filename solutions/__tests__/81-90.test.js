@@ -1,5 +1,8 @@
+import TreeNode from '../Data-Structures/TreeNode';
+
 import letterCombinations from '../81-90/Problem81';
 import FileReader from '../81-90/Problem82';
+import invertTree from '../81-90/Problem83';
 
 describe('Problems 81 - 90', () => {
   const letterMapping = new Map();
@@ -53,5 +56,50 @@ describe('Problems 81 - 90', () => {
     expect(f4.readN(2)).toBe('wo');
     expect(f4.readN(4)).toBe('rld');
     expect(f4.readN(2)).toBe('');
+  });
+
+  test('Problem 84 Invert Binary Tree', () => {
+    const a1 = new TreeNode('a');
+    const b1 = new TreeNode('b');
+    const c1 = new TreeNode('c');
+    const d1 = new TreeNode('d');
+    const e1 = new TreeNode('e');
+    const f1 = new TreeNode('f');
+
+    a1.left = b1;
+    a1.right = c1;
+    b1.left = d1;
+    b1.right = e1;
+    c1.left = f1;
+
+    const a2 = new TreeNode('a');
+    const b2 = new TreeNode('b');
+    const c2 = new TreeNode('c');
+    const d2 = new TreeNode('d');
+    const e2 = new TreeNode('e');
+    const f2 = new TreeNode('f');
+
+    a2.left = c2;
+    a2.right = b2;
+    c2.right = f2;
+    b2.left = e2;
+    b2.right = d2;
+
+    invertTree(a1);
+    expect(a1).toEqual(a2);
+
+    const g1 = new TreeNode('g');
+    a1.left = b1;
+    a1.right = c1;
+    b1.left = d1;
+    b1.right = e1;
+    c1.left = f1;
+    c1.right = g1;
+
+    const g2 = new TreeNode('g');
+    c2.left = g2;
+
+    invertTree(a1);
+    expect(a1).toEqual(a2);
   });
 });

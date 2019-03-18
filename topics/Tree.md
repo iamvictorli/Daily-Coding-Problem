@@ -152,3 +152,33 @@ d
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/71-80/Problem80.js)
 
 ---
+
+## Problem 83
+
+This problem was asked by Google.
+
+Invert a binary tree.
+
+For example, given the following tree:
+
+```
+    a
+   / \
+  b   c
+ / \  /
+d   e f
+```
+
+should become:
+
+```
+  a
+ / \
+ c  b
+ \  / \
+  f e  d
+```
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem83.js)
+
+---
