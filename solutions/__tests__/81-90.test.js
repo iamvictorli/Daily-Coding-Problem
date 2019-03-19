@@ -3,6 +3,7 @@ import TreeNode from '../Data-Structures/TreeNode';
 import letterCombinations from '../81-90/Problem81';
 import FileReader from '../81-90/Problem82';
 import invertTree from '../81-90/Problem83';
+import numIslands from '../81-90/Problem84';
 
 describe('Problems 81 - 90', () => {
   const letterMapping = new Map();
@@ -101,5 +102,36 @@ describe('Problems 81 - 90', () => {
 
     invertTree(a1);
     expect(a1).toEqual(a2);
+  });
+
+  test('Problem 84 Number of Islands', () => {
+    const matrix = [
+      [1, 0, 0, 0, 0],
+      [0, 0, 1, 1, 0],
+      [0, 1, 1, 0, 0],
+      [0, 0, 0, 0, 0],
+      [1, 1, 0, 0, 1],
+      [1, 1, 0, 0, 1]
+    ];
+
+    expect(numIslands(matrix)).toBe(4);
+
+    const matrix1 = [
+      [1, 1, 1, 1, 0],
+      [1, 1, 0, 1, 0],
+      [1, 1, 0, 0, 0],
+      [0, 0, 0, 0, 0]
+    ];
+
+    expect(numIslands(matrix1)).toBe(1);
+
+    const matrix2 = [
+      [1, 1, 0, 0, 0],
+      [1, 1, 0, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 0, 1, 1]
+    ];
+
+    expect(numIslands(matrix2)).toBe(3);
   });
 });
