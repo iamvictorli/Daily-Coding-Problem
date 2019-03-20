@@ -4,6 +4,7 @@ import letterCombinations from '../81-90/Problem81';
 import FileReader from '../81-90/Problem82';
 import invertTree from '../81-90/Problem83';
 import numIslands from '../81-90/Problem84';
+import oneOrZero from '../81-90/Problem85';
 
 describe('Problems 81 - 90', () => {
   const letterMapping = new Map();
@@ -133,5 +134,14 @@ describe('Problems 81 - 90', () => {
     ];
 
     expect(numIslands(matrix2)).toBe(3);
+  });
+
+  test('Problem 85 One Or Zero', () => {
+    expect(oneOrZero(3, 4, 0)).toBe(4);
+    expect(oneOrZero(3, 4, 1)).toBe(3);
+    expect(oneOrZero(4, 4, 1)).toBe(4);
+    expect(oneOrZero(4, 4, 1)).toBe(4);
+    expect(oneOrZero(0, 1, 0)).toBe(1);
+    expect(oneOrZero(0, 1, 1)).toBe(0);
   });
 });

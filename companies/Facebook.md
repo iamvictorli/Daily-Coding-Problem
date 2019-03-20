@@ -184,3 +184,13 @@ Given the array [10, 5, 1], you should return false, since we can't modify any o
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/71-80/Problem79.js)
 
 ---
+
+## Problem 85
+
+This problem was asked by Facebook.
+
+Given three 32-bit integers x, y, and b, return x if b is 1 and y if b is 0, using only mathematical or bit operations. You can assume b can only be 1 or 0.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem85.js)
+
+---
