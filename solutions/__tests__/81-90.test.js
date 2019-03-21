@@ -5,6 +5,7 @@ import FileReader from '../81-90/Problem82';
 import invertTree from '../81-90/Problem83';
 import numIslands from '../81-90/Problem84';
 import oneOrZero from '../81-90/Problem85';
+import minParenToRemove from '../81-90/Problem86';
 
 describe('Problems 81 - 90', () => {
   const letterMapping = new Map();
@@ -143,5 +144,16 @@ describe('Problems 81 - 90', () => {
     expect(oneOrZero(4, 4, 1)).toBe(4);
     expect(oneOrZero(0, 1, 0)).toBe(1);
     expect(oneOrZero(0, 1, 1)).toBe(0);
+  });
+
+  test('Problem 86 Minimum Parantheses To Remove', () => {
+    expect(minParenToRemove('()())()')).toBe(1);
+    expect(minParenToRemove(')(')).toBe(2);
+    expect(minParenToRemove(')()')).toBe(1);
+    expect(minParenToRemove(')((')).toBe(3);
+    expect(minParenToRemove('())')).toBe(1);
+    expect(minParenToRemove('()(')).toBe(1);
+    expect(minParenToRemove('(((')).toBe(3);
+    expect(minParenToRemove(')()(((')).toBe(4);
   });
 });
