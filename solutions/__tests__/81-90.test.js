@@ -6,6 +6,7 @@ import invertTree from '../81-90/Problem83';
 import numIslands from '../81-90/Problem84';
 import oneOrZero from '../81-90/Problem85';
 import minParenToRemove from '../81-90/Problem86';
+import division from '../81-90/Problem88';
 
 describe('Problems 81 - 90', () => {
   const letterMapping = new Map();
@@ -155,5 +156,29 @@ describe('Problems 81 - 90', () => {
     expect(minParenToRemove('()(')).toBe(1);
     expect(minParenToRemove('(((')).toBe(3);
     expect(minParenToRemove(')()(((')).toBe(4);
+  });
+
+  test('Problem 88 Division', () => {
+    expect(division(5, 3)).toBe(1);
+    expect(division(6, 3)).toBe(2);
+    expect(division(17, 3)).toBe(5);
+    expect(division(17, 2)).toBe(8);
+    expect(division(3, 5)).toBe(0);
+    expect(division(3, 1)).toBe(3);
+    expect(division(1, 8)).toBe(1);
+    expect(division(0, 4)).toBe(0);
+
+    // one negative number
+    expect(division(0, -4)).toBe(0);
+    expect(division(-17, 2)).toBe(-8);
+    expect(division(6, -3)).toBe(-2);
+
+    // two negative number
+    expect(division(-6, -3)).toBe(2);
+
+    // divide by zero error
+    expect(() => {
+      division(division(5, 0));
+    }).toThrow();
   });
 });
