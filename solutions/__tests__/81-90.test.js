@@ -7,6 +7,7 @@ import numIslands from '../81-90/Problem84';
 import oneOrZero from '../81-90/Problem85';
 import minParenToRemove from '../81-90/Problem86';
 import division from '../81-90/Problem88';
+import validateBST from '../81-90/Problem89';
 
 describe('Problems 81 - 90', () => {
   const letterMapping = new Map();
@@ -180,5 +181,19 @@ describe('Problems 81 - 90', () => {
     expect(() => {
       division(division(5, 0));
     }).toThrow();
+  });
+
+  test('Problem 89 Validate Binary Search Tree', () => {
+    const root = new TreeNode(2);
+    root.left = new TreeNode(1);
+    root.right = new TreeNode(3);
+    expect(validateBST(root)).toBe(true);
+
+    const root1 = new TreeNode(5);
+    root1.left = new TreeNode(1);
+    root1.right = new TreeNode(4);
+    root1.right.left = new TreeNode(3);
+    root1.right.right = new TreeNode(6);
+    expect(validateBST(root1)).toBe(false);
   });
 });

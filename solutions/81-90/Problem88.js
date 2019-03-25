@@ -5,8 +5,15 @@
 // Implement division of two positive integers without using the division, multiplication, or modulus operators.
 // Return the quotient as an integer, ignoring the remainder.
 //
-//
+// O(A/B) Time complexity
+// O(1) Space complexity
 
+/**
+ * division from two integers a / b
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ */
 function division(a, b) {
   if (b === 0) throw new Error('Cannot divide by 0');
   if (a === 0 || a === 1) return a;
