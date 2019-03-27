@@ -1499,3 +1499,22 @@ Given an integer n and a list of integers l, write a function that randomly gene
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem90.js)
 
 ---
+
+## Problem 91
+
+This problem was asked by Dropbox.
+
+What does the below code snippet print out? How can we fix the anonymous functions to behave as we'd expect?
+
+```javascript
+const functions = [];
+for (var i = 0; i < 10; i++) {
+  functions.push(() => i);
+}
+
+functions.forEach(f => console.log(f()));
+```
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem91.js)
+
+---

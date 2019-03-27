@@ -39,3 +39,24 @@ Sudoku is a puzzle where you're given a partially-filled 9 by 9 grid with digits
 Implement an efficient sudoku solver.
 
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/51-60/Problem54.js)
+
+---
+
+## Problem 91
+
+This problem was asked by Dropbox.
+
+What does the below code snippet print out? How can we fix the anonymous functions to behave as we'd expect?
+
+```javascript
+const functions = [];
+for (var i = 0; i < 10; i++) {
+  functions.push(() => i);
+}
+
+functions.forEach(f => console.log(f()));
+```
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem91.js)
+
+---
