@@ -1532,3 +1532,15 @@ For example, given {'CSC300': ['CSC100', 'CSC200'], 'CSC200': ['CSC100'], 'CSC10
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem92.js)
 
 ---
+
+## Problem 93
+
+This problem was asked by Apple.
+
+Given a tree, find the largest tree/subtree that is a BST.
+
+Given a tree, return the size of the largest tree/subtree that is a BST.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem93.js)
+
+---

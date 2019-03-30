@@ -194,3 +194,15 @@ A binary search tree is a tree with two children, left and right, and satisfies 
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem89.js)
 
 ---
+
+## Problem 93
+
+This problem was asked by Apple.
+
+Given a tree, find the largest tree/subtree that is a BST.
+
+Given a tree, return the size of the largest tree/subtree that is a BST.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem93.js)
+
+---

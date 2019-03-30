@@ -47,3 +47,15 @@ And there are 4 12's in the table.
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/71-80/Problem74.js)
 
 ---
+
+## Problem 93
+
+This problem was asked by Apple.
+
+Given a tree, find the largest tree/subtree that is a BST.
+
+Given a tree, return the size of the largest tree/subtree that is a BST.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem93.js)
+
+---
