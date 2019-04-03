@@ -206,3 +206,13 @@ Given a tree, return the size of the largest tree/subtree that is a BST.
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem93.js)
 
 ---
+
+## Problem 94
+
+This problem was asked by Google.
+
+Given a binary tree of integers, find the maximum path sum between two nodes. The path must go through at least one node, and does not need to go through the root.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem94.js)
+
+---
