@@ -1568,3 +1568,15 @@ Can you perform the operation without allocating extra memory (disregarding the 
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem95.js)
 
 ---
+
+## Problem 96
+
+This problem was asked by Microsoft.
+
+Given a number in the form of a list of digits, return all possible permutations.
+
+For example, given [1,2,3], return [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]].
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem96.js)
+
+---
