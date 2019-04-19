@@ -2,6 +2,7 @@ import TreeNode from '../Data-Structures/TreeNode';
 
 import courseOrder from '../91-100/Problem92';
 import { largestBST, sizeOfLargestBST } from '../91-100/Problem93';
+import maxPathSum from '../91-100/Problem94';
 
 describe('Problems 91 - 100', () => {
   test('Problem 92 Course Ordering', () => {
@@ -45,5 +46,48 @@ describe('Problems 91 - 100', () => {
     root2.right.right.right = new TreeNode(80);
     expect(largestBST(root2)).toEqual(root2.right);
     expect(sizeOfLargestBST(root2)).toBe(5);
+  });
+
+  test('Problem 94 Binary Tree Maximum Path Sum', () => {
+    const root = new TreeNode(1);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(3);
+    expect(maxPathSum(root)).toBe(6);
+
+    const root1 = new TreeNode(-10);
+    root1.left = new TreeNode(9);
+    root1.right = new TreeNode(20);
+    root1.right.left = new TreeNode(15);
+    root1.right.right = new TreeNode(7);
+    expect(maxPathSum(root1)).toBe(42);
+
+    const root2 = new TreeNode(1);
+    root2.left = new TreeNode(2);
+    root2.right = new TreeNode(3);
+    root2.left.left = new TreeNode(4);
+    root2.left.right = new TreeNode(5);
+    root2.right.left = new TreeNode(6);
+    root2.right.right = new TreeNode(7);
+    expect(maxPathSum(root2)).toBe(18);
+
+    const root3 = new TreeNode(10);
+    root3.left = new TreeNode(2);
+    root3.right = new TreeNode(10);
+    root3.left.left = new TreeNode(20);
+    root3.left.right = new TreeNode(1);
+    root3.right.right = new TreeNode(-25);
+    root3.right.right.left = new TreeNode(3);
+    root3.right.right.right = new TreeNode(4);
+    expect(maxPathSum(root3)).toBe(42);
+
+    const root4 = new TreeNode(-3);
+    expect(maxPathSum(root4)).toBe(-3);
+
+    root4.left = new TreeNode(-5);
+    root4.right = new TreeNode(-6);
+    expect(maxPathSum(root4)).toBe(-3);
+
+    root4.left.left = new TreeNode(3);
+    expect(maxPathSum(root4)).toBe(3);
   });
 });
