@@ -5,6 +5,10 @@
 // Given a binary tree of integers, find the maximum path sum between two nodes. The path must go through at least one node, and does not need to go through the root.
 //
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
+//
+// O(N) Time complexity
+// O(d) Space complexity
+// N is the number of nodes in the tree. d is the depth of the tree
 
 /**
  * Finds the maximum path sum between two nodes

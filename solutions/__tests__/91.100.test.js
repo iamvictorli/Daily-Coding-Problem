@@ -3,6 +3,7 @@ import TreeNode from '../Data-Structures/TreeNode';
 import courseOrder from '../91-100/Problem92';
 import { largestBST, sizeOfLargestBST } from '../91-100/Problem93';
 import maxPathSum from '../91-100/Problem94';
+import nextPermutation from '../91-100/Problem95';
 
 describe('Problems 91 - 100', () => {
   test('Problem 92 Course Ordering', () => {
@@ -89,5 +90,22 @@ describe('Problems 91 - 100', () => {
 
     root4.left.left = new TreeNode(3);
     expect(maxPathSum(root4)).toBe(3);
+  });
+
+  test('Problem 95 Next Permutation', () => {
+    expect(nextPermutation([1, 2, 3])).toEqual([1, 3, 2]);
+    expect(nextPermutation([1, 3, 2])).toEqual([2, 1, 3]);
+    expect(nextPermutation([3, 2, 1])).toEqual([1, 2, 3]);
+    expect(nextPermutation([1, 1, 5])).toEqual([1, 5, 1]);
+    expect(nextPermutation([6, 2, 1, 5, 4, 3, 0])).toEqual([
+      6,
+      2,
+      3,
+      0,
+      1,
+      4,
+      5
+    ]);
+    expect(nextPermutation([2, 3, 6, 5, 4, 1])).toEqual([2, 4, 1, 3, 5, 6]);
   });
 });

@@ -5,6 +5,10 @@
 // Given a tree, find the largest tree/subtree that is a BST.
 //
 // Given a tree, return the size of the largest tree/subtree that is a BST.
+//
+// O(N) Time complexity
+// O(d) Space complexity
+// N is the number of nodes in the tree. d is the depth of the tree
 
 /**
  * Returns the largest tree/subtree that is a BST.
