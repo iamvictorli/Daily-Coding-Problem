@@ -1515,7 +1515,7 @@ for (var i = 0; i < 10; i++) {
 functions.forEach(f => console.log(f()));
 ```
 
-[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem91.js)
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/91-100/Problem91.js)
 
 ---
 
@@ -1529,7 +1529,7 @@ Return null if there is no such ordering.
 
 For example, given {'CSC300': ['CSC100', 'CSC200'], 'CSC200': ['CSC100'], 'CSC100': []}, should return ['CSC100', 'CSC200', 'CSCS300'].
 
-[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem92.js)
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/91-100/Problem92.js)
 
 ---
 
@@ -1541,7 +1541,7 @@ Given a tree, find the largest tree/subtree that is a BST.
 
 Given a tree, return the size of the largest tree/subtree that is a BST.
 
-[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem93.js)
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/91-100/Problem93.js)
 
 ---
 
@@ -1551,7 +1551,7 @@ This problem was asked by Google.
 
 Given a binary tree of integers, find the maximum path sum between two nodes. The path must go through at least one node, and does not need to go through the root.
 
-[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem94.js)
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/91-100/Problem94.js)
 
 ---
 
@@ -1565,7 +1565,7 @@ For example, the list [1,2,3] should return [1,3,2]. The list [1,3,2] should ret
 
 Can you perform the operation without allocating extra memory (disregarding the input memory)?
 
-[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem95.js)
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/91-100/Problem95.js)
 
 ---
 
@@ -1577,7 +1577,7 @@ Given a number in the form of a list of digits, return all possible permutations
 
 For example, given [1,2,3], return [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]].
 
-[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem96.js)
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/91-100/Problem96.js)
 
 ---
 
@@ -1606,5 +1606,7 @@ Consider the following examples:
 - d.set(1, 1, 0) # set key 1 to value 1 at time 0
 - d.set(1, 2, 0) # set key 1 to value 2 at time 0
 - d.get(1, 0) # get key 1 at time 0 should be 2
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/91-100/Problem97.js)
 
 ---
