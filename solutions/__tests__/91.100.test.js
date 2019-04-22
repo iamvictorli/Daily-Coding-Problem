@@ -4,6 +4,7 @@ import courseOrder from '../91-100/Problem92';
 import { largestBST, sizeOfLargestBST } from '../91-100/Problem93';
 import maxPathSum from '../91-100/Problem94';
 import nextPermutation from '../91-100/Problem95';
+import permutation from '../91-100/Problem96';
 
 describe('Problems 91 - 100', () => {
   test('Problem 92 Course Ordering', () => {
@@ -107,5 +108,18 @@ describe('Problems 91 - 100', () => {
       5
     ]);
     expect(nextPermutation([2, 3, 6, 5, 4, 1])).toEqual([2, 4, 1, 3, 5, 6]);
+  });
+
+  test('Problem 96 Permutation', () => {
+    expect(permutation([1, 2, 3])).toEqual([
+      [1, 2, 3],
+      [1, 3, 2],
+      [2, 1, 3],
+      [2, 3, 1],
+      [3, 1, 2],
+      [3, 2, 1]
+    ]);
+
+    expect(permutation([])).toEqual([]);
   });
 });
