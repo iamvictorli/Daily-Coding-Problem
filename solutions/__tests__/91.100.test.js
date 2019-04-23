@@ -6,6 +6,7 @@ import maxPathSum from '../91-100/Problem94';
 import nextPermutation from '../91-100/Problem95';
 import permutation from '../91-100/Problem96';
 import MapWithTime from '../91-100/Problem97';
+import exists from '../91-100/Problem98';
 
 describe('Problems 91 - 100', () => {
   test('Problem 92 Course Ordering', () => {
@@ -138,5 +139,17 @@ describe('Problems 91 - 100', () => {
     map.set(1, 1, 0);
     map.set(1, 2, 0);
     expect(map.get(1, 0)).toBe(2);
+  });
+
+  test('Problem 98 Word Search', () => {
+    const board = [
+      ['A', 'B', 'C', 'E'],
+      ['S', 'F', 'C', 'S'],
+      ['A', 'D', 'E', 'E']
+    ];
+
+    expect(exists(board, 'ABCCED')).toBe(true);
+    expect(exists(board, 'SEE')).toBe(true);
+    expect(exists(board, 'ABCB')).toBe(false);
   });
 });
