@@ -7,6 +7,7 @@ import nextPermutation from '../91-100/Problem95';
 import permutation from '../91-100/Problem96';
 import MapWithTime from '../91-100/Problem97';
 import exists from '../91-100/Problem98';
+import longestConsecutiveSequence from '../91-100/Problem99';
 
 describe('Problems 91 - 100', () => {
   test('Problem 92 Course Ordering', () => {
@@ -151,5 +152,12 @@ describe('Problems 91 - 100', () => {
     expect(exists(board, 'ABCCED')).toBe(true);
     expect(exists(board, 'SEE')).toBe(true);
     expect(exists(board, 'ABCB')).toBe(false);
+  });
+
+  test('Problem 99 Longest Consecutive Sequence', () => {
+    expect(longestConsecutiveSequence([100, 4, 200, 1, 3, 2])).toBe(4);
+    expect(
+      longestConsecutiveSequence([9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6])
+    ).toBe(7);
   });
 });
