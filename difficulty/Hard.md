@@ -198,3 +198,40 @@ For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The long
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/41-50/Problem46.js)
 
 ---
+
+## Problem 52
+
+This problem was asked by Google.
+
+Implement an LRU (Least Recently Used) cache. It should be able to be initialized with a cache size n, and contain the following methods:
+
+- set(key, value): sets key to value. If there are already n items in the cache and we are adding a new item, then it should also remove the least recently used item.
+- get(key): gets the value at key. If no such key exists, return null.
+
+Each operation should run in O(1) time.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/51-60/Problem52.js)
+
+---
+
+## Problem 54
+
+This problem was asked by Dropbox.
+
+Sudoku is a puzzle where you're given a partially-filled 9 by 9 grid with digits. The objective is to fill the grid with the constraint that every row, column, and box (3 by 3 subgrid) must contain all of the digits from 1 to 9.
+
+Implement an efficient sudoku solver.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/51-60/Problem54.js)
+
+---
+
+## Problem 59
+
+This problem was asked by Google.
+
+Implement a file syncing algorithm for two computers over a low-bandwidth network. What if we know the files in the two computers are mostly the same?
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/51-60/Problem59.js)
+
+---
