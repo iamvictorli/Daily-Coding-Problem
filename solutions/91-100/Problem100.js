@@ -21,6 +21,10 @@
 // Output: 2
 //
 // It takes 1 step to move from (0, 0) to (1, 1). It takes one more step to move from (1, 1) to (1, 2).
+//
+// O(N) Time complexity
+// O(1) Space complexity
+// N is the number of points
 
 /**
  * Returns the minimum number of steps to reach a given sequence of points
