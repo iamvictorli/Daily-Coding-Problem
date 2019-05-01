@@ -580,3 +580,15 @@ It takes 1 step to move from (0, 0) to (1, 1). It takes one more step to move fr
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/91-100/Problem100.js)
 
 ---
+
+## Problem 102
+
+This problem was asked by Lyft.
+
+Given a list of integers and a number K, return which contiguous elements of the list sum to K.
+
+For example, if the list is [1, 2, 3, 4, 5] and K is 9, then it should return [2, 3, 4].
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem102.js)
+
+---
