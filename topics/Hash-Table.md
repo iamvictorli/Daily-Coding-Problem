@@ -126,3 +126,17 @@ For example, if the list is [1, 2, 3, 4, 5] and K is 9, then it should return [2
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem102.js)
 
 ---
+
+## Problem 103
+
+This problem was asked by Square.
+
+Given a string and a set of characters, return the shortest substring containing all the characters in the set.
+
+For example, given the string "figehaeci" and the set of characters {a, e, i}, you should return "aeci".
+
+If there is no substring containing all the characters in the set, return null.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem103.js)
+
+---

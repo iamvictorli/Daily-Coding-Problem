@@ -1,5 +1,6 @@
 import primeSumPair from '../101-110/Problem101';
 import contiguousSum from '../101-110/Problem102';
+import minWindow from '../101-110/Problem103';
 
 describe('Problem 101 - 110', () => {
   test('Problem 101 Find two prime numbers with the given sum', () => {
@@ -37,5 +38,14 @@ describe('Problem 101 - 110', () => {
       9
     ]);
     expect(contiguousSum([1, 3, -2, 1], 2)).toEqual([1, 3, -2]);
+  });
+
+  test('Problem 103 Minimum Window Substring', () => {
+    expect(minWindow('figehaeci', new Set(['a', 'e', 'i']))).toBe('aeci');
+    expect(minWindow('figehaeci', new Set(['a', 'e']))).toBe('ae');
+    expect(minWindow('figehaeci', new Set(['e', 'a']))).toBe('ae');
+    expect(minWindow('figehaeci', new Set(['e', 'a', 'n']))).toBeNull();
+    expect(minWindow('adobecodebanc', new Set(['a', 'b', 'c']))).toBe('banc');
+    expect(minWindow('a', new Set(['a']))).toBe('a');
   });
 });
