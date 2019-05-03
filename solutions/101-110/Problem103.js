@@ -9,6 +9,10 @@
 // If there is no substring containing all the characters in the set, return null.
 //
 // https://leetcode.com/problems/minimum-window-substring/
+//
+// O(S + T) Time complexity
+// O(S + T) Space complexity
+// S is the length of the string and T is the size of the set
 
 /**
  * Returns the shortest substring containing all characters in the set

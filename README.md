@@ -1731,3 +1731,15 @@ If there is no substring containing all the characters in the set, return null.
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem103.js)
 
 ---
+
+## Problem 104
+
+This problem was asked by Google.
+
+Determine whether a doubly linked list is a palindrome. What if it’s singly linked?
+
+For example, 1 -> 4 -> 3 -> 4 -> 1 returns true while 1 -> 4 returns false.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem104.js)
+
+---

@@ -1,6 +1,9 @@
+import LinkedListNode from '../Data-Structures/LinkedListNode';
+
 import primeSumPair from '../101-110/Problem101';
 import contiguousSum from '../101-110/Problem102';
 import minWindow from '../101-110/Problem103';
+import isPalindromeLinkedList from '../101-110/Problem104';
 
 describe('Problem 101 - 110', () => {
   test('Problem 101 Find two prime numbers with the given sum', () => {
@@ -47,5 +50,25 @@ describe('Problem 101 - 110', () => {
     expect(minWindow('figehaeci', new Set(['e', 'a', 'n']))).toBeNull();
     expect(minWindow('adobecodebanc', new Set(['a', 'b', 'c']))).toBe('banc');
     expect(minWindow('a', new Set(['a']))).toBe('a');
+  });
+
+  test('Problem 104 Palindrome Linked List', () => {
+    const list1 = new LinkedListNode(1);
+    list1.next = new LinkedListNode(4);
+    list1.next.next = new LinkedListNode(3);
+    list1.next.next.next = new LinkedListNode(4);
+    list1.next.next.next.next = new LinkedListNode(1);
+
+    expect(isPalindromeLinkedList(list1)).toBe(true);
+
+    const list2 = new LinkedListNode(1);
+    list2.next = new LinkedListNode(4);
+    list2.next.next = new LinkedListNode(4);
+    list2.next.next.next = new LinkedListNode(1);
+    expect(isPalindromeLinkedList(list2)).toBe(true);
+
+    const list3 = new LinkedListNode(1);
+    list3.next = new LinkedListNode(4);
+    expect(isPalindromeLinkedList(list3)).toBe(false);
   });
 });
