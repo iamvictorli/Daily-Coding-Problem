@@ -194,3 +194,15 @@ Given three 32-bit integers x, y, and b, return x if b is 1 and y if b is 0, usi
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/81-90/Problem85.js)
 
 ---
+
+## Problem 105
+
+This problem was asked by Facebook.
+
+Given a function f, and N return a debounced f of N milliseconds.
+
+That is, as long as the debounced f continues to be invoked, f itself will not be called for N milliseconds.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem105.js)
+
+---

@@ -33,3 +33,15 @@ Implement a job scheduler which takes in a function f and an integer n, and call
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/1-10/Problem10.js)
 
 ---
+
+## Problem 105
+
+This problem was asked by Facebook.
+
+Given a function f, and N return a debounced f of N milliseconds.
+
+That is, as long as the debounced f continues to be invoked, f itself will not be called for N milliseconds.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem105.js)
+
+---
