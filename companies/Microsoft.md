@@ -169,3 +169,21 @@ Your algorithm should run in O(n) complexity.
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/91-100/Problem99.js)
 
 ---
+
+## Problem 107
+
+This problem was asked by Microsoft.
+
+Print the nodes in a binary tree level-wise. For example, the following should print 1, 2, 3, 4, 5.
+
+```
+  1
+ / \
+2   3
+   / \
+  4   5
+```
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem107.js)
+
+---
