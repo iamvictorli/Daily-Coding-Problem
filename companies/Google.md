@@ -664,3 +664,15 @@ For example, 1 -> 4 -> 3 -> 4 -> 1 returns true while 1 -> 4 returns false.
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem104.js)
 
 ---
+
+## Problem 108
+
+This problem was asked by Google.
+
+Given two strings A and B, return whether or not A can be shifted some number of times to get B.
+
+For example, if A is abcde and B is cdeab, return true. If A is abc and B is acb, return false.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem108.js)
+
+---

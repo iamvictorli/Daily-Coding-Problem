@@ -7,6 +7,7 @@ import minWindow from '../101-110/Problem103';
 import isPalindromeLinkedList from '../101-110/Problem104';
 import canJump from '../101-110/Problem106';
 import levelOrder from '../101-110/Problem107';
+import isShiftedString from '../101-110/Problem108';
 
 describe('Problem 101 - 110', () => {
   test('Problem 101 Find two prime numbers with the given sum', () => {
@@ -82,7 +83,7 @@ describe('Problem 101 - 110', () => {
     expect(canJump([3, 2, 1, 0, 4])).toBe(false);
   });
 
-  test('Binary Tree Level Order Traversal', () => {
+  test('Problem 107 Binary Tree Level Order Traversal', () => {
     const tree = new TreeNode(1);
     tree.left = new TreeNode(2);
     tree.right = new TreeNode(3);
@@ -92,5 +93,10 @@ describe('Problem 101 - 110', () => {
     expect(levelOrder(tree)).toEqual([1, 2, 3, 4, 5]);
 
     expect(levelOrder(null)).toEqual([]);
+  });
+
+  test('Problem 108 Rotate String', () => {
+    expect(isShiftedString('abcde', 'cdeab')).toBe(true);
+    expect(isShiftedString('abc', 'acb')).toBe(false);
   });
 });

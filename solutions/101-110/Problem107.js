@@ -11,6 +11,10 @@
 //   4   5
 //
 // https://leetcode.com/problems/binary-tree-level-order-traversal/
+//
+// O(N) Time complexity
+// O(N) Space complexity
+// N is the number of nodes in the tree
 
 /**
  * Returns the list of nodes in a binary tree level wise
