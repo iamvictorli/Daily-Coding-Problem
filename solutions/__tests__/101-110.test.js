@@ -4,6 +4,7 @@ import primeSumPair from '../101-110/Problem101';
 import contiguousSum from '../101-110/Problem102';
 import minWindow from '../101-110/Problem103';
 import isPalindromeLinkedList from '../101-110/Problem104';
+import canJump from '../101-110/Problem106';
 
 describe('Problem 101 - 110', () => {
   test('Problem 101 Find two prime numbers with the given sum', () => {
@@ -70,5 +71,12 @@ describe('Problem 101 - 110', () => {
     const list3 = new LinkedListNode(1);
     list3.next = new LinkedListNode(4);
     expect(isPalindromeLinkedList(list3)).toBe(false);
+  });
+
+  test('Problem 106 Jump Game', () => {
+    expect(canJump([2, 0, 1, 0])).toBe(true);
+    expect(canJump([1, 1, 0, 1])).toBe(false);
+    expect(canJump([2, 3, 1, 1, 4])).toBe(true);
+    expect(canJump([3, 2, 1, 0, 4])).toBe(false);
   });
 });
