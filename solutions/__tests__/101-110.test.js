@@ -9,6 +9,7 @@ import canJump from '../101-110/Problem106';
 import levelOrder from '../101-110/Problem107';
 import isShiftedString from '../101-110/Problem108';
 import swapBits from '../101-110/Problem109';
+import binaryTreePaths from '../101-110/Problem110';
 
 describe('Problem 101 - 110', () => {
   test('Problem 101 Find two prime numbers with the given sum', () => {
@@ -104,5 +105,20 @@ describe('Problem 101 - 110', () => {
   test('Problem 109 Swap Bits', () => {
     expect(swapBits(0b10101010)).toBe(0b01010101);
     expect(swapBits(0b11100010)).toBe(0b11010001);
+  });
+
+  test('Problem 110 Binary Tree Paths', () => {
+    const tree1 = new TreeNode(1);
+    tree1.left = new TreeNode(2);
+    tree1.right = new TreeNode(3);
+    tree1.right.left = new TreeNode(4);
+    tree1.right.right = new TreeNode(5);
+    expect(binaryTreePaths(tree1)).toEqual([[1, 2], [1, 3, 4], [1, 3, 5]]);
+
+    const tree2 = new TreeNode(1);
+    tree2.left = new TreeNode(2);
+    tree2.right = new TreeNode(3);
+    tree2.left.right = new TreeNode(5);
+    expect(binaryTreePaths(tree2)).toEqual([[1, 2, 5], [1, 3]]);
   });
 });

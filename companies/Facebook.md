@@ -206,3 +206,25 @@ That is, as long as the debounced f continues to be invoked, f itself will not b
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem105.js)
 
 ---
+
+## Problem 110
+
+This problem was asked by Facebook.
+
+Given a binary tree, return all paths from the root to leaves.
+
+For example, given the tree:
+
+```
+   1
+  / \
+ 2   3
+    / \
+   4   5
+```
+
+it should return [[1, 2], [1, 3, 4], [1, 3, 5]].
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/101-110/Problem110.js)
+
+---
