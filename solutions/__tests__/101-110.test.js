@@ -8,6 +8,7 @@ import isPalindromeLinkedList from '../101-110/Problem104';
 import canJump from '../101-110/Problem106';
 import levelOrder from '../101-110/Problem107';
 import isShiftedString from '../101-110/Problem108';
+import swapBits from '../101-110/Problem109';
 
 describe('Problem 101 - 110', () => {
   test('Problem 101 Find two prime numbers with the given sum', () => {
@@ -98,5 +99,10 @@ describe('Problem 101 - 110', () => {
   test('Problem 108 Rotate String', () => {
     expect(isShiftedString('abcde', 'cdeab')).toBe(true);
     expect(isShiftedString('abc', 'acb')).toBe(false);
+  });
+
+  test('Problem 109 Swap Bits', () => {
+    expect(swapBits(0b10101010)).toBe(0b01010101);
+    expect(swapBits(0b11100010)).toBe(0b11010001);
   });
 });
