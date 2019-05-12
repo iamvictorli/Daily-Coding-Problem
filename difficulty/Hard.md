@@ -235,3 +235,30 @@ Implement a file syncing algorithm for two computers over a low-bandwidth networ
 [Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/51-60/Problem59.js)
 
 ---
+
+## Problem 64
+
+This problem was asked by Google.
+
+A knight's tour is a sequence of moves by a knight on a chessboard such that all squares are visited once.
+
+Given N, write a function to return the number of knight's tours on an N by N chessboard.
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/61-70/Problem64.js)
+
+---
+
+## Problem 67
+
+This problem was asked by Google.
+
+Implement an LFU (Least Frequently Used) cache. It should be able to be initialized with a cache size n, and contain the following methods:
+
+- set(key, value): sets key to value. If there are already n items in the cache and we are adding a new item, then it should also remove the least frequently used item. If there is a tie, then the least recently used key should be removed.
+- get(key): gets the value at key. If no such key exists, return null.
+
+Each operation should run in O(1) time
+
+[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/61-70/Problem67.js)
+
+---
