@@ -9,6 +9,7 @@
 // the longest increasing subsequence has length 6: it is 0, 2, 6, 9, 11, 15.
 //
 // https://leetcode.com/problems/longest-increasing-subsequence/
+// https://dailycodingproblem.com/blog/longest-increasing-subsequence/
 //
 // Best solution is N Log N using a variation of binary search
 //

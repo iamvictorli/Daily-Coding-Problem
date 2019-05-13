@@ -11,7 +11,7 @@ import isShiftedString from '../101-110/Problem108';
 import swapBits from '../101-110/Problem109';
 import binaryTreePaths from '../101-110/Problem110';
 
-describe('Problem 101 - 110', () => {
+describe('Problems 101 - 110', () => {
   test('Problem 101 Find two prime numbers with the given sum', () => {
     expect(primeSumPair(4)).toEqual([2, 2]);
     expect(primeSumPair(74)).toEqual([3, 71]);

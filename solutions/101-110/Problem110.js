@@ -14,6 +14,10 @@
 // it should return [[1, 2], [1, 3, 4], [1, 3, 5]].
 //
 // https://leetcode.com/problems/binary-tree-paths/
+//
+// O(N) Time complexity
+// O(H) Space complexity
+// N is the nodes in the tree and H is the height of the tree
 
 /**
  * Returns all paths from the root to leaves in a binary tree
