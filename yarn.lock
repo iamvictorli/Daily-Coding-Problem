@@ -1506,6 +1506,11 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
+confusing-browser-globals@^1.0.7:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.8.tgz#93ffec1f82a6e2bf2bc36769cc3a92fa20e502f3"
+  integrity sha512-lI7asCibVJ6Qd3FGU7mu4sfG4try4LX3+GVS+Gv8UlrEf2AeW57piecapnog2UHZSbcX/P/1UDWVaTsblowlZg==
+
 console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
@@ -1766,14 +1771,14 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-airbnb-base@13.1.0:
-  version "13.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-13.1.0.tgz#b5a1b480b80dfad16433d6c4ad84e6605052c05c"
-  integrity sha512-XWwQtf3U3zIoKO1BbHh6aUhJZQweOwSt4c2JrPDg9FP3Ltv3+YfEv7jIDB8275tVnO/qOHbfuYg3kzw6Je7uWw==
+eslint-config-airbnb-base@14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-14.0.0.tgz#8a7bcb9643d13c55df4dd7444f138bf4efa61e17"
+  integrity sha512-2IDHobw97upExLmsebhtfoD3NAKhV4H0CJWP3Uprd/uk+cHuWYOczPVxQ8PxLFUAw7o3Th1RAU8u1DoUpr+cMA==
   dependencies:
-    eslint-restricted-globals "^0.1.1"
+    confusing-browser-globals "^1.0.7"
     object.assign "^4.1.0"
-    object.entries "^1.0.4"
+    object.entries "^1.1.0"
 
 eslint-config-prettier@4.3.0:
   version "4.3.0"
@@ -1821,11 +1826,6 @@ eslint-plugin-prettier@3.1.0:
   integrity sha512-XWX2yVuwVNLOUhQijAkXz+rMPPoCr7WFiAl8ig6I7Xn+pPVhDhzg4DxHpmbeb0iqjO9UronEA3Tb09ChnFVHHA==
   dependencies:
     prettier-linter-helpers "^1.0.0"
-
-eslint-restricted-globals@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-restricted-globals/-/eslint-restricted-globals-0.1.1.tgz#35f0d5cbc64c2e3ed62e93b4b1a7af05ba7ed4d7"
-  integrity sha1-NfDVy8ZMLj7WLpO0saevBbp+1Nc=
 
 eslint-scope@^4.0.3:
   version "4.0.3"
@@ -3570,7 +3570,7 @@ object.assign@^4.1.0:
     has-symbols "^1.0.0"
     object-keys "^1.0.11"
 
-object.entries@^1.0.4:
+object.entries@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/object.entries/-/object.entries-1.1.0.tgz#2024fc6d6ba246aee38bdb0ffd5cfbcf371b7519"
   integrity sha512-l+H6EQ8qzGRxbkHOd5I/aHRhHDKoQXQ8g0BYt4uSweQU1/J6dZUOyWh9a2Vky35YCKjzmgxOzta2hH6kf9HuXA==
