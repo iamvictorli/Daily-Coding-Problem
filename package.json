@@ -28,7 +28,7 @@
     "undefined": "0.1.0"
   },
   "dependencies": {
-    "@babel/core": "7.4.5",
+    "@babel/core": "7.11.0",
     "@babel/preset-env": "7.4.5",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.8.0",
